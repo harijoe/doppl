@@ -18,8 +18,11 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    # Locales supported in the routing — english is omitted, add new locales separated with a |
-    locales: fr
+    locales:
+        - { prefix: '', locale: 'en'}
+        - { prefix: 'fr', locale: 'fr'}
+
+    default_tag: php
 
     # Tags definition, each combination should be defined in the translation files
     tags:

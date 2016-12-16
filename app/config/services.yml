@@ -4,3 +4,16 @@ parameters:
 #    parameter_name: value
 
 services:
+    app.service.clean_url_generator:
+        class: AppBundle\Services\CleanURLGenerator
+
+    app.router.tag:
+        class: AppBundle\Router\TagLoader
+        arguments:
+            - '%tags%'
+            - '%locales%'
+            - '%%default_tag%%'
+            - '@translator.default'
+            - '@app.service.clean_url_generator'
+        tags:
+            - { name: routing.loader }

@@ -27,14 +27,28 @@ class CheckTagCommand extends ContainerAwareCommand
             assert($tagConfig['fields'], 'Asserting the fields key is defined');
 
             $translator = $this->getContainer()->get('translator.default');
-            $catalogFr = $translator->getCatalogue('fr');
-            $catalogEn = $translator->getCatalogue('en');
+            $locales = $this->getContainer()->getParameter('locales');
+            $catalogs = [];
 
-            $requiredFields = ['title', 'tag', 'description'];
+            // Checking locales
+            foreach ($locales as $localeDefinition) {
+                assert(isset($localeDefinition['locale']), "Asserting locale definition are valid");
+                assert(isset($localeDefinition['prefix']), "Asserting locale definition are valid");
+                $catalog = $translator->getCatalogue($localeDefinition['locale']);
 
+                // Check the translator has not fallen back on another locale
+                assert(
+                    $catalog->getLocale() === $localeDefinition['locale'],
+                    "Checking catalog for locale \"{$localeDefinition['locale']}\""
+                );
+
+                $catalogs[$localeDefinition['locale']] = $catalog;
+            }
+
+            // Checking tags
             foreach ($tagConfig['list'] as $tag) {
                 foreach ($tagConfig['fields'] as $field) {
-                    foreach (['en' => $catalogEn, 'fr' => $catalogFr] as $locale => $catalog) {
+                    foreach ($catalogs as $locale => $catalog) {
                         assert(
                             $catalog->defines("tag.{$tag}.{$field}"),
                             "Asserting field \"{$field}\" in tag \"{$tag}\" for locale \"{$locale}\""
@@ -42,6 +56,10 @@ class CheckTagCommand extends ContainerAwareCommand
                     }
                 }
             }
+
+            // Check default tag is defined and included in tags
+            $defaultTag = $this->getContainer()->getParameter('default_tag');
+            assert(in_array($defaultTag, $tagConfig['list']), 'Asserting the default tag is in the tag list');
 
             $output->writeln('<info>Tag file is valid</info>');
 

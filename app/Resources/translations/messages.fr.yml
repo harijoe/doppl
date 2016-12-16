@@ -1,3 +1,5 @@
+routing:
+  prefix: freelance
 tag:
   php:
     name: PHP

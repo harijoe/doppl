@@ -5,23 +5,29 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-/**
- * Class DefaultController
- */
 class DefaultController extends Controller
 {
     /**
      * @Route("/")
-     * @Route("/{_locale}", requirements={"_locale": "%locales%"})
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
-//        $tags = $this->getParameter('tags');
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);
+        $defaultTag = $this->getParameter('default_tag');
+
+        return $this->tagAction($request, $defaultTag);
+    }
+
+    /**
+     * @param Request $request
+     * @param string  $tag
+     * @return Response
+     */
+    public function tagAction(Request $request, $tag)
+    {
+        return new Response($tag.' '.$request->getLocale());
     }
 }
