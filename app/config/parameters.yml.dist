@@ -17,3 +17,13 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # Tags definition, each combination should be defined in the translation files
+    tags:
+        list:
+            - hello
+            - world
+        fields:
+            - name
+            - title
+            - description

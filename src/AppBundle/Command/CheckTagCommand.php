@@ -21,23 +21,25 @@ class CheckTagCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {
-            $tagLoader = $this->getContainer()->get('app.tag.loader');
-            $tags = $tagLoader->load()['tags'];
+            $tagConfig = $this->getContainer()->getParameter('tags');
+            assert(gettype($tagConfig) === 'array', 'Asserting tags config key is defined');
+            assert($tagConfig['list'], 'Asserting the list  key is defined');
+            assert($tagConfig['fields'], 'Asserting the fields key is defined');
 
-            assert(gettype($tags) === 'array');
+            $translator = $this->getContainer()->get('translator.default');
+            $catalogFr = $translator->getCatalogue('fr');
+            $catalogEn = $translator->getCatalogue('en');
 
             $requiredFields = ['title', 'tag', 'description'];
 
-            foreach ($tags as $tag => $fields) {
-                foreach ($requiredFields as $requiredField) {
-                    assert(
-                        isset($fields[$requiredField]),
-                        "Asserting the tag \"{$tag}\" defines the field \"{$requiredField}\""
-                    );
-                    assert(
-                        !empty($fields[$requiredField]),
-                        "Asserting the field \"{$requiredField}\" in the tag \"${tag}\" is not be empty"
-                    );
+            foreach ($tagConfig['list'] as $tag) {
+                foreach ($tagConfig['fields'] as $field) {
+                    foreach (['en' => $catalogEn, 'fr' => $catalogFr] as $locale => $catalog) {
+                        assert(
+                            $catalog->defines("tag.{$tag}.{$field}"),
+                            "Asserting field \"{$field}\" in tag \"{$tag}\" for locale \"{$locale}\""
+                        );
+                    }
                 }
             }
 

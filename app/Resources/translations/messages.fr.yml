@@ -1,0 +1,11 @@
+tag:
+  php:
+    name: PHP
+    title: Développeur PHP
+    description: |
+      PHP est un incontournable du dev web
+  javascript:
+    name: Javascript
+    title: Développeur Javascript
+    description: |
+      Javascript est une technologie majeure du web

@@ -1,0 +1,11 @@
+tag:
+  php:
+    name: PHP
+    title: PHP developer
+    description: |
+      PHP is one of the main language blablabla
+  javascript:
+    name: Javascript
+    title: Javascript developer
+    description: |
+      Javascript is one of the main language blablabla
