@@ -1,0 +1,12 @@
+tags:
+    hello:
+      tag: Coucou
+      title: Coucou
+      description: |
+        Hello World
+
+        Coucou
+    world:
+      tag: Coucou
+      title: Coucou
+      description: qsdqsdqs
