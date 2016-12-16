@@ -12,14 +12,14 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
+     * @Route("/")
+     * @Route("/{_locale}", requirements={"_locale": "%locales%"})
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
-        $tagLoader = $this->get('app.tag.loader');
-        $tags = $tagLoader->load();
-        // replace this example code with whatever you need
+//        $tags = $this->getParameter('tags');
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
