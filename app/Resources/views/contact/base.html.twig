@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {# Julien Vallini #}
+    <h1>{{ 'contact.title'|trans }}</h1>
+    {{ 'contact.subtitle'|trans|nl2pr|raw }}
+
+    {% block form %}{% endblock %}
+{% endblock %}

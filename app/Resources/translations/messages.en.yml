@@ -1,5 +1,14 @@
 routing:
   prefix: freelancer
+home:
+  title: Web and mobile freelance developer
+  subtitle: |
+    Looking for ??
+  tag:
+    subtitle: I am a tag, my name is %tag_name%
+  hire_me: Hire me as a freelancer for these jobs
+header:
+  contact: Contact
 tag:
   php:
     name: PHP
@@ -11,3 +20,17 @@ tag:
     title: Javascript developer
     description: |
       Javascript is one of the main language blablabla
+contact:
+  link: Contact me
+  title: Contact me
+  subtitle: |
+    Contact me !
+    In english
+  success:
+    message: Thanks! I will respond shortly
+    return: Return to home
+  form:
+    name: Name
+    email: Email
+    message: Message
+    send: Send

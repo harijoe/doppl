@@ -12,8 +12,21 @@ services:
         arguments:
             - '%tags%'
             - '%locales%'
-            - '%%default_tag%%'
             - '@translator.default'
             - '@app.service.clean_url_generator'
         tags:
             - { name: routing.loader }
+
+    app.twig_extension.locale_switcher:
+        class: AppBundle\Twig\LocaleSwitcherExtension
+        public: false
+        arguments:
+            - '%locales%'
+        tags:
+            - { name: twig.extension }
+
+    app.twig_extension.newline_to_paragraph:
+        class: AppBundle\Twig\NewlineToParagraphExtension
+        public: false
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,6 @@
+{# Locales #}
+{% set other_locale = app.request.locale == 'en' ? 'fr' : 'en' %}
+{% set other_locale_name = app.request.locale == 'en' ? 'français' : 'english' %}
+<a href="{{ path( app.request.attributes.get('_route') | switch_locale(other_locale)) }}">
+    {{ other_locale_name }}
+</a>

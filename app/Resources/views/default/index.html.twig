@@ -1,5 +1,52 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   {{ tag }}
+    {# Julien Vallini #}
+    {% if tag is empty %}
+        <h1>Julien Vallini</h1>
+    {% else %}
+        <a href="{{ path('home_' ~ app.request.getLocale()) }}">Julien Vallini</a>
+    {% endif %}
+
+    {# Tag title #}
+    {% if tag is empty %}
+        <p>{{ 'home.title'|trans }}</p>
+        {{ 'home.subtitle'|trans|nl2pr|raw }}
+    {% else %}
+        <h1>{{ ('tag.' ~ tag ~ '.title')|trans }}</h1>
+        {{ 'home.tag.subtitle'|trans({'%tag_name%': ('tag.' ~ tag ~ '.name')|trans})|nl2pr|raw }}
+    {% endif %}
+
+    {# Tag list #}
+    <ul>
+        {% for item in tags %}
+            <li>
+                {% if item == tag %}
+                    <span>{{ ('tag.' ~ tag ~ '.name')|trans }}</span>
+                {% else %}
+                    <a href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
+                        {{ ('tag.' ~ item ~ '.name')|trans }}
+                    </a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    {# Tag description #}
+    {% if tag is not empty %}
+        {{ ('tag.' ~ tag ~ '.description')|trans|nl2pr|raw }}
+    {% endif %}
+
+    {# Contact link #}
+    <p>
+        <a href="{{ path('contact_' ~ app.request.getLocale()) }}">
+            {{ 'contact.link'|trans }}
+        </a>
+    </p>
+
+
 {% endblock %}
+
+{% macro switchLocale() %}
+
+{% endmacro %}

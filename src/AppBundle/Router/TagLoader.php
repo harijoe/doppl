@@ -29,7 +29,6 @@ class TagLoader extends Loader
 {
     private $loaded;
     private $tags;
-    private $defaultTag;
     private $translator;
     private $locales;
     private $cleanURLGenerator;
@@ -37,15 +36,13 @@ class TagLoader extends Loader
     /**
      * @param array $tags
      * @param array $locales
-     * @param string $defaultTag
      * @param Translator $translator
      * @param CleanURLGenerator $cleanURLGenerator
      */
-    public function __construct($tags, $locales, $defaultTag, $translator, $cleanURLGenerator)
+    public function __construct($tags, $locales, $translator, $cleanURLGenerator)
     {
         $this->tags = $tags;
         $this->locales = $locales;
-        $this->defaultTag = $defaultTag;
         $this->translator = $translator;
         $this->cleanURLGenerator = $cleanURLGenerator;
     }
@@ -73,15 +70,13 @@ class TagLoader extends Loader
             // Default route
             $defaultRoute = new Route($prefix, [
                 '_locale' => $locale,
-                'tag' => $this->defaultTag,
                 '_controller' => 'AppBundle:Default:tag',
             ]);
-            $builder->addRoute($defaultRoute);
+            $builder->addRoute($defaultRoute, "home_{$locale}");
 
             // Default route with freelance prefix
             $freelanceRoute = new Route($prefix.'/'.$freelance, [
                 '_locale' => $locale,
-                'tag' => $this->defaultTag,
                 '_controller' => 'AppBundle:Default:tag',
             ]);
             $builder->addRoute($freelanceRoute);
@@ -96,7 +91,7 @@ class TagLoader extends Loader
                     'tag' => $tag,
                     '_controller' => 'AppBundle:Default:tag',
                 ]);
-                $builder->addRoute($route);
+                $builder->addRoute($route, "tag_{$tag}_{$locale}");
             }
         }
 

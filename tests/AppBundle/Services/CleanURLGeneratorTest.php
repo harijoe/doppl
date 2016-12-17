@@ -11,7 +11,7 @@ class CleanURLGeneratorTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function toAscii()
+    public function itShouldTransformToAscii()
     {
         $generator = new CleanURLGenerator();
 

@@ -1,13 +1,38 @@
 routing:
   prefix: freelance
+home:
+  title: Développeur web et mobile freelance
+  subtitle: |
+    A la recherche ??
+  tag:
+    subtitle: Je suis un tag, mon nom est %tag_name%
+  hire_me: Engagez moi comme freelance pour ces métiers
+header:
+  contact: Contact
 tag:
   php:
     name: PHP
     title: Développeur PHP
     description: |
       PHP est un incontournable du dev web
+
+      Voici un deuxieme paragraphe
   javascript:
     name: Javascript
     title: Développeur Javascript
     description: |
       Javascript est une technologie majeure du web
+contact:
+  link: Contactez moi
+  title: Me contacter
+  subtitle: |
+    Contactez moi !
+    Sur plusieurs lignes
+  success:
+    message: Merci pour votre message !
+    return: Retourner à l'accueil
+  form:
+    name: Nom
+    email: Email
+    message: Message
+    send: Envoyer

@@ -57,10 +57,6 @@ class CheckTagCommand extends ContainerAwareCommand
                 }
             }
 
-            // Check default tag is defined and included in tags
-            $defaultTag = $this->getContainer()->getParameter('default_tag');
-            assert(in_array($defaultTag, $tagConfig['list']), 'Asserting the default tag is in the tag list');
-
             $output->writeln('<info>Tag file is valid</info>');
 
             return 0;
