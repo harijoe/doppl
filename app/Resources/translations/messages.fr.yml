@@ -38,80 +38,77 @@ tag:
     title: Développeur PHP
     description: |
       # PHP en 2016 ?
-      Hello world
-      lol
+      Le PHP n'a pas excellente presse ces derniers temps. Il lui était reproché notamment ses
+      problèmes en termes de sécurité et de performance. Néanmoins, la donne a changé sur ce point avec
+      l'arrivée de PHP7, deux fois plus rapide que son prédécesseur, PHP5.6. En ce qui concerne
+      la sécurité, PHP jouit d'une communauté large et active faisant évoluer le langage rapidement.
 
-      # Another one ?
-      Coucouc
-      cqsdqsdqds
+      # Le langage le plus utilisé
+      Si on en croit l'étude w3techs, PHP est le langage le plus utilisé avec 82.4% de parts de marché. Les grands
+      noms du web tels que facebook ou amazon utilisent le PHP. Wordpress, le <abbr title="Content Management System">
+      CMS</abbr> le plus utilisé, est lui-même en PHP. Un grand nombre de développeurs maitrisent le PHP, cela facilite
+      le recrutement, particulièrement exigeant de le monde de l'IT.
 
-      qsdqsd
+      # Choisir PHP pour son projet
+      Le PHP est un excellent language permettant de développer rapidement un prototype. En effet, le langage
+      propose nativement un ensemble d'outils permettant de travailler avec le protocole HTTP. Pas besoin de
+      réinventer la roue ou d'installer de librairies volumineuses comme c'est le cas avec le Java par exemple !
+      De plus, à l'aide d'un framework comme Symfony, il est possible d'écrire du code maintenable sur le long
+      terme, c'est à dire évoluant avec votre projet
   javascript:
     name: Javascript
     title: Développeur Javascript
     description: |
-      Javascript is one of the main language blablabla
+      # A propos de Javascript
+      La popularité du Javascript n'a cessé d'augmenter ses dernières années. Traditionnellement le langage était
+      utilisé en parallèleCette tendance s'est accentuée avec
+      l'arrivée d'AngularJS en 2009 et des <abbr title="Single-page Applications">SPA</abbr>.
+
+      # React
+      Les interfaces utilisateurs développées en javascript se sont peu à peu complexifiées. Ceci a abouti à
+      l'apparition de React, une librairie Javascript permettant aux développeurs de raisonner en terme de
+      composants et non globalement. React a gagné en popularité ces 3 dernières années, c'est maintenant le
+      standard de l'industrie pour le développement d'applications complexes. On peut même l'utiliser pour
+      le développement mobile avec React Native.
   html5:
     name: HTML5
     title: Développeur web
-    description: |
-      Coucou
   react:
     name: React
     title: Expert React
-    description: |
-      Coucou
   nodejs:
     name: Nodejs
     title: Développeur Nodejs
-    description: |
-      Coucou
   devops:
     name: Devops
     title: Expert Devops
-    description: |
-      # Qu
-
   scrum:
     name: Scrum
     title: Scrum Master
-    description: |
-      Coucou
   serverless:
     name: Serverless
     title: Expert Serverless
-    description: |
-      Coucou
   graphql:
     name:  Graphql
     title: Graphql
-    description: |
-      Coucou
   symfony:
     name:  Symfony3
     title: Expert Symfony3
-    description: |
-      Coucou
   frontend:
     name: Frontend
     title: Développeur Frontend
-    description: |
-      Coucou
   fullstack:
     name: Fullstack
     title: Développeur Fullstack
-    description: |
-      Coucou
   cto:
     name: CTO
     title: CTO - Directeur technique
-    description: |
-      Coucou
   react-native:
     name: React Native
     title: Développeur React Native
-    description: |
-      Coucou
+  seo:
+    name: SEO
+    title: Consultant SEO
 contact:
   link: Contactez moi
   title: Me contacter

@@ -6,73 +6,65 @@ links:
 home:
   title: Top web and mobile freelance developer
   subtitle: |
-    # Looking for ??
+      Need somebody to work with you on your innovative project or simply do the job?
 
-    Here you go
+      With several years of experience into web and mobile development,
+      I can help you making your project succeed.
+
+      I will understand your business and adapt accordingly to deliver the
+      maximum value to your company. I pride myself in working in transparently,
+      efficiently and I guarantee the sustainability of your project.
   tag:
-    subtitle: I am a tag, my name is %tag_name%
+    subtitle: |
+      Need somebody to work with you on your innovative project or simply do the job?
+
+      With several years of experience into %tag% development,
+      I can help you making your project succeed.
+
+      I will understand your business and adapt accordingly to deliver the
+      maximum value to your company. I pride myself in working in transparently,
+      efficiently and I guarantee the sustainability of your project.
   hire_me: Hire me as a freelancer for these jobs
 tag:
   php:
     name: PHP
     title: PHP developer
-    description: |
-      PHP is one of the main language blablabla
   javascript:
     name: Javascript
     title: Javascript developer
-    description: |
-      Javascript is one of the main language blablabla
   react:
     name: React
     title: React
-    description: |
-      Coucou
   nodejs:
     name: Nodejs
     title: Nodejs
-    description: |
-      Coucou
   devops:
     name: Devops
     title: Devops
-    description: |
-      Coucou
   scrum:
     name: Scrum
     title: Scrum
-    description: |
-      Coucou
   serverless:
     name: Serverless
     title: Serverless
-    description: |
-      Coucou
   graphql:
     name:  Graphql
     title: Graphql
-    description: |
-      Coucou
   symfony:
     name:  Symfony
     title: Symfony
-    description: |
-      Coucou
   frontend:
     name: Frontend
     title: Frontend
-    description: |
-      Coucou
   fullstack:
     name: Fullstack
     title: Fullstack
-    description: |
-      Coucou
   react-native:
     name: React
     title: React
-    description: |
-      Coucou
+  seo:
+    name: SEO
+    title: Consultant SEO
 contact:
   link: Contact me
   title: Contact me

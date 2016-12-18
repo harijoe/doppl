@@ -1,53 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <header>
-        {# Julien Vallini #}
-        {% if tag is empty %}
-            <h1>Julien Vallini</h1>
-        {% else %}
-            <a href="{{ path('home_' ~ app.request.getLocale()) }}">Julien Vallini</a>
-        {% endif %}
+<header>
+    {# Julien Vallini #}
+    {% if tag is empty %}
+        <h1>Julien Vallini</h1>
+    {% else %}
+        <a href="{{ path('home_' ~ app.request.getLocale()) }}">Julien Vallini</a>
+    {% endif %}
 
-        {# Tag title #}
-        {% if tag is empty %}
-            <p>{{ 'home.title'|trans }}</p>
-            {{ 'home.subtitle'|trans|text2html }}
-        {% else %}
-            <h1>{{ ('tag.' ~ tag ~ '.title')|trans }}</h1>
-            {{ 'home.tag.subtitle'|trans({'%tag%': ('tag.' ~ tag ~ '.name')|trans})|text2html }}
-        {% endif %}
+    {# Tag title #}
+    {% if tag is empty %}
+        <p>{{ 'home.title'|trans }}</p>
+        {{ 'home.subtitle'|trans|text2html }}
+    {% else %}
+        <h1>{{ ('tag.' ~ tag ~ '.title')|trans }}</h1>
+        {{ 'home.tag.subtitle'|trans({'%tag%': ('tag.' ~ tag ~ '.name')|trans})|text2html }}
+    {% endif %}
 
-        {# Tag list #}
-        <ul>
-            {% for item in tags %}
-                <li>
-                    {% if item == tag %}
-                        <span>{{ ('tag.' ~ tag ~ '.name')|trans }}</span>
-                    {% else %}
-                        <a href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
-                            {{ ('tag.' ~ item ~ '.name')|trans }}
-                        </a>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </header>
+    {# Tag list #}
+    <ul>
+        {% for item in tags %}
+            <li>
+                {% if item == tag %}
+                    <span>{{ ('tag.' ~ tag ~ '.name')|trans }}</span>
+                {% else %}
+                    <a href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
+                        {{ ('tag.' ~ item ~ '.name')|trans }}
+                    </a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</header>
 
-    <section>
-        {# Tag description #}
-        {% if tag is not empty %}
-            {{ ('tag.' ~ tag ~ '.description')|trans|text2html }}
-        {% endif %}
+    {# TODO Override translator to return false or even '' when the translation is not found #}
+{% if ('tag.' ~ tag ~ '.description')|trans != 'tag.' ~ tag ~ '.description' %}
+<section>
+    {# Tag description #}
+    {% if tag is not empty %}
+        {{ ('tag.' ~ tag ~ '.description')|trans|text2html }}
+    {% endif %}
 
-        {# Contact link #}
-        <p>
-            <a href="{{ path('contact_' ~ app.request.getLocale()) }}">
-                {{ 'contact.link'|trans }}
-            </a>
-        </p>
-    </section>
+    {# Contact link #}
+    <p>
+        <a href="{{ path('contact_' ~ app.request.getLocale()) }}">
+            {{ 'contact.link'|trans }}
+        </a>
+    </p>
 </section>
+{% endif %}
 {% endblock %}
 
 {% macro switchLocale() %}
