@@ -26,7 +26,7 @@ services:
             - { name: twig.extension }
 
     app.twig_extension.newline_to_paragraph:
-        class: AppBundle\Twig\NewlineToParagraphExtension
+        class: AppBundle\Twig\TextToHTMLExtension
         public: false
         tags:
             - { name: twig.extension }

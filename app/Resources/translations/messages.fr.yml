@@ -1,27 +1,117 @@
 routing:
   prefix: freelance
-home:
-  title: Développeur web et mobile freelance
-  subtitle: |
-    A la recherche ??
-  tag:
-    subtitle: Je suis un tag, mon nom est %tag_name%
-  hire_me: Engagez moi comme freelance pour ces métiers
-header:
+links:
+  home: Développeur freelance
   contact: Contact
+home:
+  title: Développeur web et mobile freelance passionné
+  subtitle: |
+      Vous recherchez un freelance pour travailler sur votre projet
+      à Paris ou ailleurs ?
+
+      Fort de plusieurs années d'expérience dans le développement
+      d'applications web et mobile, je peux vous aider à faire décoller
+      votre projet.
+
+      Je saurai comprendre votre métier et m'adapter à vos contraintes. En
+      vous proposant d'adopter une méthodologie agile, je garantirai efficacité et
+      transparence des développements tout en assurant la perennité de votre projet.
+
+      De plus, je saurai mettre en place un cadre de développment optimisé
+      pour une reprise des développements futurs la plus aisée possible.
+  tag:
+    subtitle: |
+      Vous recherchez un freelance pour travailler sur votre projet
+      à Paris ou ailleurs ?
+
+      Fort de plusieurs années d'expérience dans le développement %tag%,
+      je peux vous aider à faire décoller votre projet. L'expertise %tag% que
+      j'ai acquise me permettra de vous accompagner afin de réussir votre projet.
+
+      Je saurai comprendre votre métier et m'adapter à vos contraintes. En
+      vous proposant d'adopter une méthodologie agile, je garantirai efficacité et
+      transparence des développements tout en assurant la perennité de votre projet.
+  hire_me: Engagez moi comme freelance pour ces métiers
 tag:
   php:
     name: PHP
     title: Développeur PHP
     description: |
-      PHP est un incontournable du dev web
+      # PHP en 2016 ?
+      Hello world
+      lol
 
-      Voici un deuxieme paragraphe
+      # Another one ?
+      Coucouc
+      cqsdqsdqds
+
+      qsdqsd
   javascript:
     name: Javascript
     title: Développeur Javascript
     description: |
-      Javascript est une technologie majeure du web
+      Javascript is one of the main language blablabla
+  html5:
+    name: HTML5
+    title: Développeur web
+    description: |
+      Coucou
+  react:
+    name: React
+    title: Expert React
+    description: |
+      Coucou
+  nodejs:
+    name: Nodejs
+    title: Développeur Nodejs
+    description: |
+      Coucou
+  devops:
+    name: Devops
+    title: Expert Devops
+    description: |
+      # Qu
+
+  scrum:
+    name: Scrum
+    title: Scrum Master
+    description: |
+      Coucou
+  serverless:
+    name: Serverless
+    title: Expert Serverless
+    description: |
+      Coucou
+  graphql:
+    name:  Graphql
+    title: Graphql
+    description: |
+      Coucou
+  symfony:
+    name:  Symfony3
+    title: Expert Symfony3
+    description: |
+      Coucou
+  frontend:
+    name: Frontend
+    title: Développeur Frontend
+    description: |
+      Coucou
+  fullstack:
+    name: Fullstack
+    title: Développeur Fullstack
+    description: |
+      Coucou
+  cto:
+    name: CTO
+    title: CTO - Directeur technique
+    description: |
+      Coucou
+  react-native:
+    name: React Native
+    title: Développeur React Native
+    description: |
+      Coucou
 contact:
   link: Contactez moi
   title: Me contacter

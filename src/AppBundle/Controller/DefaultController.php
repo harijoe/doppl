@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -16,7 +17,6 @@ class DefaultController extends Controller
     /**
      * @param Request     $request
      * @param null|string $tag
-     * @param bool        $isHome
      * @return Response
      */
     public function tagAction(Request $request, $tag = null)
@@ -32,6 +32,7 @@ class DefaultController extends Controller
     /**
      * @Route(path="contact", name="contact_en", defaults={"_locale"="en"})
      * @Route(path="fr/contact", name="contact_fr", defaults={"_locale"="fr"})
+     * @Method({"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -72,6 +73,7 @@ class DefaultController extends Controller
     /**
      * @Route(path="contact/success", name="contact_success_en", defaults={"_locale"="en"})
      * @Route(path="fr/contact/succes", name="contact_success_fr", defaults={"_locale"="fr"})
+     * @Method("GET")
      * @return Response
      */
     public function contactSuccessAction()

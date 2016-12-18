@@ -72,6 +72,7 @@ class TagLoader extends Loader
                 '_locale' => $locale,
                 '_controller' => 'AppBundle:Default:tag',
             ]);
+            $defaultRoute->setMethods('GET');
             $builder->addRoute($defaultRoute, "home_{$locale}");
 
             // Default route with freelance prefix
@@ -79,6 +80,7 @@ class TagLoader extends Loader
                 '_locale' => $locale,
                 '_controller' => 'AppBundle:Default:tag',
             ]);
+            $freelanceRoute->setMethods('GET');
             $builder->addRoute($freelanceRoute);
 
             // Tags routes
@@ -91,6 +93,7 @@ class TagLoader extends Loader
                     'tag' => $tag,
                     '_controller' => 'AppBundle:Default:tag',
                 ]);
+                $route->setMethods('GET');
                 $builder->addRoute($route, "tag_{$tag}_{$locale}");
             }
         }

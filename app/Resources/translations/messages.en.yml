@@ -1,14 +1,17 @@
 routing:
-  prefix: freelancer
+  prefix: Freelance developer
+links:
+  home: Freelance
+  contact: Contact
 home:
-  title: Web and mobile freelance developer
+  title: Top web and mobile freelance developer
   subtitle: |
-    Looking for ??
+    # Looking for ??
+
+    Here you go
   tag:
     subtitle: I am a tag, my name is %tag_name%
   hire_me: Hire me as a freelancer for these jobs
-header:
-  contact: Contact
 tag:
   php:
     name: PHP
@@ -20,6 +23,56 @@ tag:
     title: Javascript developer
     description: |
       Javascript is one of the main language blablabla
+  react:
+    name: React
+    title: React
+    description: |
+      Coucou
+  nodejs:
+    name: Nodejs
+    title: Nodejs
+    description: |
+      Coucou
+  devops:
+    name: Devops
+    title: Devops
+    description: |
+      Coucou
+  scrum:
+    name: Scrum
+    title: Scrum
+    description: |
+      Coucou
+  serverless:
+    name: Serverless
+    title: Serverless
+    description: |
+      Coucou
+  graphql:
+    name:  Graphql
+    title: Graphql
+    description: |
+      Coucou
+  symfony:
+    name:  Symfony
+    title: Symfony
+    description: |
+      Coucou
+  frontend:
+    name: Frontend
+    title: Frontend
+    description: |
+      Coucou
+  fullstack:
+    name: Fullstack
+    title: Fullstack
+    description: |
+      Coucou
+  react-native:
+    name: React
+    title: React
+    description: |
+      Coucou
 contact:
   link: Contact me
   title: Contact me

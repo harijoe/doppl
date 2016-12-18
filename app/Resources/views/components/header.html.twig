@@ -1,2 +1,11 @@
-{% include 'components/locale.html.twig' %}
-{% include 'components/contact.html.twig' %}
+<nav>
+    <ul>
+        <li>
+            <a href="{{ path('home_' ~ app.request.getLocale()) }}">
+                {{ 'links.home'|trans }}
+            </a>
+        </li>
+        {% include 'components/locale.html.twig' %}
+        {% include 'components/contact.html.twig' %}
+    </ul>
+</nav>

@@ -3,7 +3,7 @@
 {% block body %}
     {# Julien Vallini #}
     <h1>{{ 'contact.title'|trans }}</h1>
-    {{ 'contact.subtitle'|trans|nl2pr|raw }}
+    {{ 'contact.subtitle'|trans|text2html }}
 
     {% block form %}{% endblock %}
 {% endblock %}
