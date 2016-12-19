@@ -1,3 +1,13 @@
 <footer>
     <p>{{ 'home.hire_me'|trans }}</p>
+    {# Job list #}
+    <ul>
+        {% for item in tags %}
+            <li>
+                <a href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
+                    {{ ('tag.' ~ item ~ '.title')|trans }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </footer>
