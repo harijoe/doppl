@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" />
     </head>
     <body>
         {% block wrapper %}
@@ -12,6 +13,8 @@
             {% block body %}{% endblock %}
             {% include 'components/footer.html.twig' %}
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('js/bundle.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

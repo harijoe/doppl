@@ -32,6 +32,9 @@ tag:
   javascript:
     name: Javascript
     title: Javascript developer
+  html5:
+    name: HTML5
+    title: Web Developer
   react:
     name: React
     title: React
@@ -59,6 +62,9 @@ tag:
   fullstack:
     name: Fullstack
     title: Fullstack
+  cto:
+    name: CTO
+    title: CTO - Chief Technical Officer
   react-native:
     name: React
     title: React
