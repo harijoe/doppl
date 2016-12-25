@@ -1,0 +1,13 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: white;
+  fill: white;
+
+  &.dark {
+    stroke: $text;
+    fill: $text;
+  }
+}

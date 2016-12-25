@@ -9,6 +9,12 @@
   .container {
     padding-bottom: 20px;
   }
+  .hero-foot {
+    padding-bottom: 30px;
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .nav {
@@ -93,15 +99,6 @@
   padding-right: 50px;
   @include mobile {
     padding-right: inherit;
-  }
-}
-
-.header {
-  .hero-foot {
-    padding-bottom: 30px;
-    @include tablet {
-      display: none;
-    }
   }
 }
 
