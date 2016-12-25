@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" />
     </head>
     <body>
+        {% include 'components/icon.html.twig' %}
+
         {% block wrapper %}
             {% include 'components/nav.html.twig' %}
             {% block body %}{% endblock %}

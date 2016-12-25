@@ -1,3 +1,6 @@
-<a href="{{ path('contact_' ~ app.request.getLocale()) }}">
-    {{ 'links.contact'|trans }}
-</a>
+<span class="nav-item hire-me">
+    <a class="button is-primary" href="{{ path('contact_' ~ app.request.getLocale()) }}">
+        <svg class="icon icon-user-plus"><use xlink:href="#icon-user-plus"></use></svg>
+        <span>{{ 'links.contact'|trans }}</span>
+    </a>
+</span>

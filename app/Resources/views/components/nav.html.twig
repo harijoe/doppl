@@ -1,11 +1,16 @@
-<nav>
-    <ul>
-        <li>
-            <a href="{{ path('home_' ~ app.request.getLocale()) }}">
-                {{ 'links.home'|trans }}
-            </a>
-        </li>
-        <li>{% include 'components/locale.html.twig' %}</li>
-        <li>{% include 'components/contact.html.twig' %}</li>
+<nav class="nav">
+    <div class="nav-left">
+        <a class="nav-item" href="{{ path('home_' ~ app.request.getLocale()) }}">
+            {{ 'links.home'|trans }}
+        </a>
+    </div>
+    <span id="nav-toggle" class="nav-toggle">
+       <span></span>
+       <span></span>
+       <span></span>
+    </span>
+    <ul id="nav-menu" class="nav-right nav-menu">
+        {% include 'components/locale.html.twig' %}
+        {% include 'components/contact.html.twig' %}
     </ul>
 </nav>

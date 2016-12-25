@@ -2,34 +2,34 @@ routing:
   prefix: freelance
 links:
   home: Développeur freelance
-  contact: Contact
+  contact: Engagez moi
 home:
-  title: Développeur web et mobile freelance passionné
+  title: Développeur web passionné freelance
   subtitle: |
-      Vous recherchez un freelance pour travailler sur votre projet
-      à Paris ou ailleurs ?
+      <strong>Vous recherchez un freelance pour travailler sur votre projet
+      à Paris ou ailleurs ?</strong>
 
-      Fort de plusieurs années d'expérience dans le développement
-      d'applications web et mobile, je peux vous aider à faire décoller
+      Fort de plusieurs années d'expérience dans le <strong>développement
+      d'applications web</strong>, je peux vous aider à faire décoller
       votre projet.
 
       Je saurai comprendre votre métier et m'adapter à vos contraintes. En
-      vous proposant d'adopter une méthodologie agile, je garantirai efficacité et
+      vous proposant d'adopter une <strong>méthodologie agile</strong>, je garantirai efficacité et
       transparence des développements tout en assurant la perennité de votre projet.
 
       De plus, je saurai mettre en place un cadre de développment optimisé
       pour une reprise des développements futurs la plus aisée possible.
   tag:
     subtitle: |
-      Vous recherchez un freelance pour travailler sur votre projet
-      à Paris ou ailleurs ?
+      <strong>Vous recherchez un freelance pour travailler sur votre projet
+      à Paris ou ailleurs ?</strong>
 
-      Fort de plusieurs années d'expérience dans le développement %tag%,
-      je peux vous aider à faire décoller votre projet. L'expertise %tag% que
+      Fort de plusieurs années d'expérience %tag-in-phrase%,
+      je peux vous aider à faire décoller votre projet. L'expertise <strong>%tag-in-phrase%</strong> que
       j'ai acquise me permettra de vous accompagner afin de réussir votre projet.
 
       Je saurai comprendre votre métier et m'adapter à vos contraintes. En
-      vous proposant d'adopter une méthodologie agile, je garantirai efficacité et
+      vous proposant d'adopter une <strong>méthodologie agile</strong>, je garantirai efficacité et
       transparence des développements tout en assurant la perennité de votre projet.
   hire_me: Engagez moi comme freelance pour ces métiers
 tag:
@@ -73,53 +73,68 @@ tag:
   html5:
     name: HTML5
     title: Développeur web
+    in-phrase: dans le développement HTML5
   react:
     name: React
     title: Expert React
+    in-phrase: dans le développement React
   nodejs:
     name: Nodejs
     title: Développeur Nodejs
+    in-phrase: dans le développement Nodejs
   devops:
     name: Devops
     title: Expert Devops
+    in-phrase: dans le développement Devops
   scrum:
     name: Scrum
     title: Scrum Master
+    in-phrase: dans la méthodologie Scrum
   serverless:
     name: Serverless
     title: Expert Serverless
+    in-phrase: dans le développement Serverless
   graphql:
     name:  Graphql
-    title: Graphql
+    title: Expert Graphql
+    in-phrase: dans le développement Graphql
   symfony:
     name:  Symfony3
     title: Expert Symfony3
+    in-phrase: dans le développement Symfony3
   frontend:
     name: Frontend
     title: Développeur Frontend
+    in-phrase: dans le développement Frontend
   fullstack:
     name: Fullstack
     title: Développeur Fullstack
+    in-phrase: dans le développement Fullstack
   cto:
     name: CTO
-    title: CTO - Directeur technique
+    title: CTO - Directeur technique sur demande
+    in-phrase: dans la direction technique
   react-native:
     name: React Native
     title: Développeur React Native
+    in-phrase: dans le développement React Native
   seo:
     name: SEO
-    title: Consultant SEO
+    title: Expert SEO
+    in-phrase: dans l'optimisation du SEO:
 contact:
   link: Contactez moi
   title: Me contacter
   subtitle: |
-    Contactez moi !
-    Sur plusieurs lignes
+    Contactez moi en utilisant ce formulaire, je vous répondrai le plus rapidement possible !
   success:
     message: Merci pour votre message !
     return: Retourner à l'accueil
   form:
     name: Nom
+    placeholder: John Doe
     email: Email
+    placeholder: votreemails@exemple.com
     message: Message
+    placeholder: Bonjour, je m'appelle…
     send: Envoyer

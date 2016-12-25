@@ -19,7 +19,7 @@ const config = {
     module: {
         loaders: [{
             test: /\.scss$/,
-            loaders: ["style-loader", "css-loader", "sass-loader"]
+            loaders: ["style-loader", "css-loader?sourceMap", "sass-loader"]
         }, {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -27,6 +27,9 @@ const config = {
             query: {
                 presets: ['es2015']
             }
+        }, {
+            test: /\.(png|woff|woff2|eot|ttf|svg).*$/,
+            loader: 'url-loader?limit=100000'
         }]
     },
     plugins: [

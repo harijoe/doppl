@@ -1,9 +1,18 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    {# Julien Vallini #}
-    <h1>{{ 'contact.title'|trans }}</h1>
-    {{ 'contact.subtitle'|trans|text2html }}
-
-    {% block form %}{% endblock %}
+    <section class="hero is-medium has-text-centered contact is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                {# Julien Vallini #}
+                <h1 class="title">{{ 'contact.title'|trans }}</h1>
+                <p class="subtitle">{{ 'contact.subtitle'|trans|text2html }}</p>
+                <div class="columns">
+                    <div class="column is-one-third is-offset-one-third">
+                        {% block form %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

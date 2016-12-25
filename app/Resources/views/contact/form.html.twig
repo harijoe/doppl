@@ -1,7 +1,9 @@
 {% extends ':contact:base.html.twig' %}
 
 {% block form %}
+<div class="container has-text-left">
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
+</div>
 {% endblock %}

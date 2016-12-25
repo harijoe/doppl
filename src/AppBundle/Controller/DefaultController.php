@@ -19,7 +19,7 @@ class DefaultController extends Controller
      * @param null|string $tag
      * @return Response
      */
-    public function tagAction(Request $request, $tag = null)
+    public function tagAction($tag = null)
     {
         $tags = $this->getParameter('tags')['list'];
 
@@ -39,10 +39,25 @@ class DefaultController extends Controller
     public function contactAction(Request $request)
     {
         $form = $this->createFormBuilder()
-            ->add('name', TextType::class, ['label' => 'contact.form.name'])
-            ->add('email', EmailType::class, ['label' => 'contact.form.email'])
-            ->add('message', TextareaType::class, ['label' => 'contact.form.message'])
-            ->add('send', SubmitType::class, ['label' => 'contact.form.send'])
+            ->add('name', TextType::class, [
+                'label' => 'contact.form.name.label',
+                'attr' => ['class' => 'input', 'placeholder' => 'contact.form.name.placeholder'],
+                'label_attr' => ['class' => 'label'],
+            ])
+            ->add('email', EmailType::class, [
+                'label' => 'contact.form.email.label',
+                'attr' => ['class' => 'input', 'placeholder' => 'contact.form.email.placeholder'],
+                'label_attr' => ['class' => 'label'],
+            ])
+            ->add('message', TextareaType::class, [
+                'label' => 'contact.form.message.label',
+                'attr' => ['class' => 'textarea', 'placeholder' => 'contact.form.message.placeholder'],
+                'label_attr' => ['class' => 'label'],
+            ])
+            ->add('send', SubmitType::class, [
+                'label' => 'contact.form.send',
+                'attr' => ['class' => 'button is-primary'],
+            ])
             ->getForm();
 
         $form->handleRequest($request);
@@ -65,8 +80,11 @@ class DefaultController extends Controller
             return $this->redirectToRoute("contact_success_{$request->getLocale()}");
         }
 
+        $tags = $this->getParameter('tags')['list'];
+
         return $this->render(':contact:form.html.twig', [
             'form' => $form->createView(),
+            'tags' => $tags,
         ]);
     }
 

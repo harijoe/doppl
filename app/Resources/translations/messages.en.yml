@@ -1,27 +1,27 @@
 routing:
   prefix: Freelance developer
 links:
-  home: Freelance
-  contact: Contact
+  home: Freelance developer
+  contact: Hire me
 home:
-  title: Top web and mobile freelance developer
+  title: Top web freelance developer
   subtitle: |
-      Need somebody to work with you on your innovative project or simply do the job?
+      <strong>Need somebody to work with you on your innovative project or simply do the job?</strong>
 
-      With several years of experience into web and mobile development,
+      With several years of experience into <strong>web development</strong>,
       I can help you making your project succeed.
 
-      I will understand your business and adapt accordingly to deliver the
+      I will <strong>understand your business</strong> and adapt accordingly to deliver the
       maximum value to your company. I pride myself in working in transparently,
       efficiently and I guarantee the sustainability of your project.
   tag:
     subtitle: |
-      Need somebody to work with you on your innovative project or simply do the job?
+      <strong>Need somebody to work with you on your innovative project or simply do the job?</strong>
 
-      With several years of experience into %tag% development,
+      With <strong>several years of experience %tag-in-phrase%</strong>,
       I can help you making your project succeed.
 
-      I will understand your business and adapt accordingly to deliver the
+      I will <strong>understand your business</strong> and adapt accordingly to deliver the
       maximum value to your company. I pride myself in working in transparently,
       efficiently and I guarantee the sustainability of your project.
   hire_me: Hire me as a freelancer for these jobs
@@ -29,59 +29,79 @@ tag:
   php:
     name: PHP
     title: PHP developer
+    in-phrase: into PHP development
   javascript:
     name: Javascript
     title: Javascript developer
+    in-phrase: into Javascript development
   html5:
     name: HTML5
     title: Web Developer
+    in-phrase: into HTML5 development
   react:
     name: React
-    title: React
+    title: React Expert
+    in-phrase: into React development
   nodejs:
     name: Nodejs
-    title: Nodejs
+    title: Nodejs Developer
+    in-phrase: into Nodejs development
   devops:
     name: Devops
-    title: Devops
+    title: Devops Expert
+    in-phrase: into Devops development
   scrum:
     name: Scrum
-    title: Scrum
+    title: Scrum Master
+    in-phrase: with Scrum methodology
   serverless:
     name: Serverless
-    title: Serverless
+    title: Serverless Expert
+    in-phrase: into Serverless development
   graphql:
     name:  Graphql
-    title: Graphql
+    title: Graphql Expert
+    in-phrase: into Graphql development
   symfony:
-    name:  Symfony
-    title: Symfony
+    name:  Symfony3
+    title: Symfony3 Expert
+    in-phrase: into Symfony3 development
   frontend:
     name: Frontend
-    title: Frontend
+    title: Frontend Developer
+    in-phrase: into Frontend development
   fullstack:
     name: Fullstack
-    title: Fullstack
+    title: Fullstack Developer
+    in-phrase: into Fullstack development
   cto:
     name: CTO
-    title: CTO - Chief Technical Officer
+    title: CTO - Chief Technical Officer As a Service
+    in-phrase: into technical team management
   react-native:
-    name: React
-    title: React
+    name: React Native
+    title: React Native Developer
+    in-phrase: into React  development
   seo:
     name: SEO
-    title: Consultant SEO
+    title: SEO Expert
+    in-phrase: in SEO optimization
 contact:
   link: Contact me
   title: Contact me
   subtitle: |
-    Contact me !
-    In english
+    Send me a message using this form, I will answer you as soon as I can!
   success:
     message: Thanks! I will respond shortly
     return: Return to home
   form:
-    name: Name
-    email: Email
-    message: Message
+    name:
+      label: Name
+      placeholder: John Doe
+    email:
+      label: Email
+      placeholder: yourmail@example.com
+    message:
+      label: Message
+      placeholder: Hi, my name is…
     send: Send
