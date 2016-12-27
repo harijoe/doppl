@@ -25,7 +25,7 @@
 #      user: name=www-data groups=www-data
 #    - name: Set up authorized_keys for the www-data user
 #      authorized_key: user=www-data key="{{ ssh_key }}" state=present
-     - name: Update repositories cache and install "foo" package
+     - name: Install unzip
        apt:
          name: unzip
          state: present

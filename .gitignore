@@ -16,5 +16,7 @@
 /vendor/
 /web/bundles/
 /web/hmr/
+/web/css/
+/web/js/
 /.idea/*
 /node_modules/

@@ -36,11 +36,11 @@ module.exports = function (shipit) {
     });
 
 
-    shipit.task('run_composer_install', function () {
+    shipit.blTask('run_composer_install', function () {
         return shipit.remote(`cd ${deployTo}/current && composer install`);
     });
 
-    shipit.task('run_npm_install', function () {
+    shipit.blTask('run_npm_install', function () {
         return shipit.remote(`cd ${deployTo}/current && npm install --production`)
             .then(() => shipit.remote(`cd ${deployTo}/current && npm run build`));
     });

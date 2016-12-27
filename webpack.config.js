@@ -10,8 +10,8 @@ const env = args.env ? args.env : 'dev';
 // Get available configurations
 const configDir = path.join(__dirname, 'front/config');
 var configs = {
-  dev: require(path.join(configDir, 'dev.config')),
-  prod: require(path.join(configDir, 'prod.config')),
+  dev: () => require(path.join(configDir, 'dev.config')),
+  prod: () => require(path.join(configDir, 'prod.config')),
 };
 
 /**
@@ -31,7 +31,7 @@ function getValidEnv(env) {
  */
 function buildConfig(env) {
   var usedEnv = getValidEnv(env);
-  return configs[usedEnv];
+  return configs[usedEnv]();
 }
 
 module.exports = buildConfig(env);
