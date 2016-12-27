@@ -41,7 +41,8 @@ module.exports = function (shipit) {
     });
 
     shipit.task('run_npm_install', function () {
-        return shipit.remote(`cd ${deployTo}/current && npm install --production`);
+        return shipit.remote(`cd ${deployTo}/current && npm install --production`)
+            .then(() => shipit.remote(`cd ${deployTo}/current && npm run build`));
     });
 
     shipit.on('fetched', function () {
