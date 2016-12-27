@@ -1,0 +1,35 @@
+# This file is auto-generated during the composer install
+parameters:
+    version: 1
+    mailer_transport: smtp
+    mailer_host: email-smtp.eu-west-1.amazonaws.com
+    mailer_user: AKIAIP2C3HGBJTT664KA
+    mailer_password: Atu4Lo+Xs8TP1pItLSUzDbYj7FnAwjr1Z7EhxuJ5Iv3p
+    mailer_port: 587
+    mailer_encryption: tls
+    from_email: julien@vallini.io
+    to_email: vallinij@gmail.com
+    secret: 10a71537bd16196f3bd83e3b8ee3d35faf0cc54e
+    locales:
+        - { prefix: '', locale: 'en' }
+        - { prefix: 'fr', locale: 'fr' }
+    tags:
+        list:
+            - php
+            - javascript
+            - html5
+            - cto
+            - react
+            - nodejs
+            - devops
+            - scrum
+            - serverless
+            - graphql
+            - symfony
+            - frontend
+            - fullstack
+            - react-native
+            - seo
+        fields:
+            - name
+            - title

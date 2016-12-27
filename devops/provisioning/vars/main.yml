@@ -1,0 +1,15 @@
+php_enable_php_fpm: true
+php_enable_apc: true
+
+apache_remove_default_vhost: true
+apache_vhosts:
+  - servername: "julien.vallini.com"
+    documentroot: "/var/www/doppl/current/web"
+    extra_parameters: |
+      <FilesMatch \.php$>
+          SetHandler proxy:fcgi://127.0.0.1:9000
+      </FilesMatch>
+      ErrorLog /var/log/apache2/project_error.log
+      CustomLog /var/log/apache2/project_access.log combined
+
+ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/ZgpPPA4rDpbEB3RHkkRqRC9EEM1JUOLiKYmZzsKos8SAaSWg+ZJXy83J4kP4NBvLs1p2dpD/mlWh06hhd+HSdBi70FxLp2faTwCI1IImmanrB/fGomG4nslW9iCaIF4taGLObGYzsu65IvNZEHRVNIEdBx9zRDVu51y7A+mdWaKOXi7Rt8P1pYrsxjyqdPFcof4VP3nMwean5BUeqqk+ylkSnt/ZXeGvPgLXvxg3JZejSs+wr6/l3tjl+hfyZhidDMLkfVXiAoAsoWPJJbTYIxu+Uw2xXHL8oHl0hjZQ37QKDly6quuGwPm/KKpg22OMGCMiX5+vPGmpsw0dfV4gkETf7F2q40jm2q7bLpfBW/EsKfsmgnabfxRiYMp4dTMcycrfFm5YEdPhFEZlf/1rrX5mBhd0Fmh74HnDoMShGGtuXLw7dKcMgFxH+UUMMEAbgTR751I5G9Iya8eKONB+Z3duIeLia6EwDgixoHyq15N7Uon6bqzK0B/hPaqt5YuzGv7JvYYPN6b5yvBp+RRbYMkAuX66BUvSULgHUi6x+7TUbcYdzKHDksnnfFqP2z8Q3GTfl27F5376jv5GRrrWyx0PKrhCbzO+xNr/cJPGGOFkxX8Svi4wZ7Tu/TZ+Y0UUcQmJTGbT1w18yxIhSnW/AwubGSYrwOIR4fi+s4/www== vallinij@gmail.com"

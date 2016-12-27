@@ -103,5 +103,5 @@ contact:
       placeholder: yourmail@example.com
     message:
       label: Message
-      placeholder: Hi, my name is…
+      placeholder: Tell me about your project…
     send: Send

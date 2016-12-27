@@ -1,0 +1,47 @@
+---
+
+- name: Provisioning aws
+  hosts: aws
+  become: true
+  gather_facts: False
+  pre_tasks:
+    - raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+    - setup: # aka gather_facts
+  vars_files:
+    - vars/main.yml
+  roles:
+#    - geerlingguy.apache
+#    - geerlingguy.php # After geerlingguy.apache
+#    - geerlingguy.apache-php-fpm
+    - geerlingguy.composer
+    - geerlingguy.nodejs
+  tasks:
+     - name: Update apt
+       apt:
+         update_cache: yes
+         cache_valid_time: 604700 # 7 days
+
+#    - name: Creating user www-data
+#      user: name=www-data groups=www-data
+#    - name: Set up authorized_keys for the www-data user
+#      authorized_key: user=www-data key="{{ ssh_key }}" state=present
+     - name: Update repositories cache and install "foo" package
+       apt:
+         name: unzip
+         state: present
+
+#    - name: Change /var/www ownership
+#      file:
+#        path: /var/www
+#        owner: www-data
+#        group: www-data
+#        mode: 0644
+#    - ubuntu-apt
+#    - create-www-data-user
+#    - ssh-keys # need create-www-data-user
+#    - ubuntu-php
+#    - composer
+#    - ubuntu-symfony-nginx
+#    - ubuntu-postgresql
+#    - newrelic-php
+#    - nodejs

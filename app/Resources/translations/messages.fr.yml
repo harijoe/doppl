@@ -4,7 +4,7 @@ links:
   home: Développeur freelance
   contact: Engagez moi
 home:
-  title: Développeur web passionné freelance
+  title: Top développeur web freelance
   subtitle: |
       <strong>Vous recherchez un freelance pour travailler sur votre projet
       à Paris ou ailleurs ?</strong>
@@ -131,10 +131,13 @@ contact:
     message: Merci pour votre message !
     return: Retourner à l'accueil
   form:
-    name: Nom
-    placeholder: John Doe
-    email: Email
-    placeholder: votreemails@exemple.com
-    message: Message
-    placeholder: Bonjour, je m'appelle…
-    send: Envoyer
+   name:
+     label: Nom
+     placeholder: John Doe
+   email:
+     label: Email
+     placeholder: votremail@exemple.com
+   message:
+     label: Message
+     placeholder: Parlez moi de votre projet
+   send: Envoyer
