@@ -31,21 +31,23 @@ module.exports = function (shipit) {
         }
     });
 
-    shipit.task('copy_parameters', function () {
+    shipit.task('copy_parameters', () => {
         return shipit.local(`cp ${path.join(__dirname, prod_parameters_path)}.prod ${workspace}/${prod_parameters_path}`);
     });
 
 
-    shipit.blTask('run_composer_install', function () {
-        return shipit.remote(`cd ${deployTo}/current && composer install`);
-    });
+    shipit.blTask('run_composer_install', () => runRemotely([
+        'export SYMFONY_ENV=prod && composer install --no-dev --optimize-autoloader',
+        'php bin/symfony_requirements',
+        'php bin/console cache:clear --env=prod --no-debug',
+    ], shipit.releasePath)(shipit));
 
-    shipit.blTask('run_npm_install', function () {
-        return shipit.remote(`cd ${deployTo}/current && npm install --production`)
-            .then(() => shipit.remote(`cd ${deployTo}/current && npm run build`));
-    });
+    shipit.blTask('run_npm_install', () => runRemotely([
+        'npm install --production',
+        'npm run build',
+    ], shipit.releasePath)(shipit));
 
-    shipit.on('fetched', function () {
+    shipit.on('fetched', function ( ) {
         shipit.start('copy_parameters');
     });
 
@@ -53,4 +55,17 @@ module.exports = function (shipit) {
         shipit.start('run_composer_install');
         shipit.start('run_npm_install');
     });
+};
+
+/*
+    Utils
+ */
+
+const runRemotely = (cmds, path) => (shipit) => {
+    if (!Array.isArray(cmds) || cmds.length === 0) { return null; }
+
+    return cmds.reduce(
+        (promiseChain, cmd) => promiseChain.then(() => shipit.remote(`cd ${path} && ${cmd}`)),
+        Promise.resolve()
+    );
 };

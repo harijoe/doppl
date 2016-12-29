@@ -63,7 +63,9 @@ class DefaultController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            list("name" => $name, "email" => $email, "message" => $message) = $form->getData();
+            $name = $form->getData()['name'];
+//            $email = $form->getData()['email'];
+//            $message = $form->getData()['message'];
             $message = \Swift_Message::newInstance()
                 ->setSubject("New message from Doppl — from {$name}")
                 ->setFrom($this->getParameter('from_email'))
