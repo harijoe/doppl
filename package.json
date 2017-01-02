@@ -31,6 +31,7 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {
+    "commander": "^2.9.0",
     "shipit": "^1.0.2",
     "shipit-deploy": "^2.4.0",
     "shipit-shared": "^4.4.2",

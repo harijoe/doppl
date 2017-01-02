@@ -37,64 +37,44 @@
             </div>
         </div>
     </header>
-    <section class="column" id="about-me">
+    <section class="column about-me" id="about-me">
         <div class="hero is-fullheight tag-panel">
             <div class="hero-body">
 
-            <div class="container">
-                {# Tag description #}
-                <div class="content is-small">
-                    <!-- Rocket icon by Icons8 -->
-                    {% if tag is empty %}
-                        {{ 'home.subtitle'|trans|text2html }}
-                    {% else %}
-                        {{ 'home.tag.subtitle'|trans({'%tag-in-phrase%': ('tag.' ~ tag ~ '.in-phrase')|trans})|text2html }}
-                    {% endif %}
-                </div>
+                <div class="container">
+                    {# Tag description #}
+                    <div class="content is-small">
+                        {% if tag is empty %}
+                            {{ 'home.subtitle'|trans|text2html }}
+                        {% else %}
+                            {{ 'home.tag.subtitle'|trans({'%tag-in-phrase%': ('tag.' ~ tag ~ '.in-phrase')|trans})|text2html }}
+                        {% endif %}
 
-                {# Tag list #}
-                <ul class="tags">
-                    {% for item in tags %}
-                        <li>
-                            {% if item == tag %}
-                                <span class="button is-active is-primary">
-                                    {{ ('tag.' ~ tag ~ '.name')|trans }}
-                                </span>
-                            {% else %}
-                                <a class="button is-primary is-outlined" href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
-                                    {{ ('tag.' ~ item ~ '.name')|trans }}
-                                </a>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+                        {# Tag list #}
+                        <ul class="tags">
+                            {% for item in tags %}
+                                <li>
+                                    {% if item == tag %}
+                                        <span class="button is-active is-primary">
+                                            {{ ('tag.' ~ tag ~ '.name')|trans }}
+                                        </span>
+                                    {% else %}
+                                        <a class="button is-primary is-outlined" href="{{ path('tag_' ~ item ~ '_' ~ app.request.locale) }}">
+                                            {{ ('tag.' ~ item ~ '.name')|trans }}
+                                        </a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        {# Contact me #}
+                        <div class="has-text-centered">
+                            <a class="button is-primary is-medium">{{ 'home.contact_me'|trans }}</a>
+                        </div>
                 </div>
+            </div>
         </div>
     </section>
 </div>
-
-
-    {#</div>#}
-    {#</section>#}
-
-    {% if ('tag.' ~ tag ~ '.description')|has_trans %}
-        <section>
-            {# Tag description #}
-            {% if tag is not empty %}
-                {{ ('tag.' ~ tag ~ '.description')|trans|text2html }}
-            {% endif %}
-
-            {# Contact link #}
-            <p>
-                <a href="{{ path('contact_' ~ app.request.getLocale()) }}">
-                    {{ 'contact.link'|trans }}
-                </a>
-            </p>
-        </section>
-    {% endif %}
 {% endblock %}
 
-    {% macro switchLocale() %}
-
-    {% endmacro %}

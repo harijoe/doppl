@@ -12,7 +12,7 @@ apache_vhosts:
       ErrorLog /var/log/apache2/project_error.log
       CustomLog /var/log/apache2/project_access.log combined
 
-nodejs_install_npm_user: "www-data"
+nodejs_install_npm_user: "ubuntu"
 nodejs_version: "7.x"
 nodejs_npm_global_packages:
   - name: webpack

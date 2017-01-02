@@ -1,79 +1,7 @@
-.selfie {
-  border-radius: 100%;
-  width: 240px;
-  height: 240px;
-  margin-bottom: 40px;
-}
-
-.header {
-  .container {
-    padding-bottom: 20px;
-  }
-  .hero-foot {
-    padding-bottom: 30px;
-    @include tablet {
-      display: none;
-    }
-  }
-}
-
-.nav {
-  position: fixed;
-  width: 100%;
-  border-bottom: 1px solid $border;
-}
-
-.nav-right {
-  right: 0;
-  align-items: stretch;
-  display: flex;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-  justify-content: flex-end;
-
-  @include mobile {
-    display: none;
-  }
-}
-
-@include mobile {
-  .nav {
-    .nav-menu .nav-item {
-      padding: 0;
-    }
-
-
-    .button {
-      height: 40px;
-      border-radius: 0;
-      border: 0;
-    }
-  }
-  .hero-body {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
-.for-these-jobs {
-  a {
-    color: white;
-  }
-  .title {
-    padding: 20px 0 20px 0;
-  }
-}
-
-.locale-switcher {
-  .flag-icon {
-    margin-right: 5px;
-  }
-}
-
-.hire-me {
-  font-weight: bold;
-}
+@import "components/contact";
+@import "components/for_these_jobs";
+@import "components/header";
+@import "components/nav";
 
 .columns {
   margin-top: 0;
@@ -86,31 +14,9 @@
   padding: 0;
 }
 
-.tags {
-  text-align: left;
-  li {
-    display: inline-block;
-    margin: 2px;
-  }
-}
-
-.tag-panel {
-  text-align: justify;
-  padding-right: 50px;
-  @include mobile {
-    padding-right: inherit;
-  }
-}
-
-.contact {
-  input {
-    margin-bottom: 10px;
-  }
-  label {
-    margin-top: 10px;
-  }
-  button {
-    margin-top: 10px;
-    width: 100%;
+@include mobile {
+  .hero-body {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
