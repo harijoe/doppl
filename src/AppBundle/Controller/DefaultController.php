@@ -21,11 +21,8 @@ class DefaultController extends Controller
      */
     public function tagAction($tag = null)
     {
-        $tags = $this->getParameter('tags')['list'];
-
         return $this->render(':default:index.html.twig', [
             'tag' => $tag,
-            'tags' => $tags,
         ]);
     }
 
@@ -82,11 +79,8 @@ class DefaultController extends Controller
             return $this->redirectToRoute("contact_success_{$request->getLocale()}");
         }
 
-        $tags = $this->getParameter('tags')['list'];
-
         return $this->render(':contact:form.html.twig', [
             'form' => $form->createView(),
-            'tags' => $tags,
         ]);
     }
 

@@ -6,12 +6,7 @@
             <div class="container">
                 {# Julien Vallini #}
                 <h1 class="title">{{ 'contact.title'|trans }}</h1>
-                <p class="subtitle">{{ 'contact.subtitle'|trans|text2html }}</p>
-                <div class="columns">
-                    <div class="column is-one-third is-offset-one-third">
-                        {% block form %}{% endblock %}
-                    </div>
-                </div>
+                {% block form %}{% endblock %}
             </div>
         </div>
     </section>

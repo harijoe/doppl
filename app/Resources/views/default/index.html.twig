@@ -52,7 +52,7 @@
 
                         {# Tag list #}
                         <ul class="tags">
-                            {% for item in tags %}
+                            {% for item in tags.list %}
                                 <li>
                                     {% if item == tag %}
                                         <span class="button is-active is-primary">
@@ -69,7 +69,9 @@
 
                         {# Contact me #}
                         <div class="has-text-centered">
-                            <a class="button is-primary is-medium">{{ 'home.contact_me'|trans }}</a>
+                            <a class="button is-primary is-medium" href="{{ path('contact_' ~ app.request.getLocale()) }}">
+                                {{ 'home.contact_me'|trans }}
+                            </a>
                         </div>
                 </div>
             </div>

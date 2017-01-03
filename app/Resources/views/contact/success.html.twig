@@ -1,7 +1,7 @@
 {% extends ':contact:base.html.twig' %}
 
 {% block form %}
-    <p>{{ 'contact.success.message'|trans }}</p>
+    <p class="subtitle">{{ 'contact.success.message'|trans }}</p>
 
     <p>
         <a href="{{ path('home_' ~ app.request.getLocale()) }}">
