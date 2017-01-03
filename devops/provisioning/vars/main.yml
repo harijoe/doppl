@@ -11,6 +11,19 @@ apache_vhosts:
       </FilesMatch>
       ErrorLog /var/log/apache2/project_error.log
       CustomLog /var/log/apache2/project_access.log combined
+apache_mods_enabled:
+  - expires.load
+  - rewrite.load
+  - ssl.load
+apache_global_vhost_settings: |
+  ExpiresActive On
+  ExpiresByType image/gif "access 1 month"
+  ExpiresByType image/jpg "access 1 month"
+  ExpiresByType image/jpeg "access 1 month"
+  ExpiresByType image/png "access 1 month"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/js "access 1 week"
+  ExpiresByType application/javascript "access 1 week"
 
 nodejs_install_npm_user: "ubuntu"
 nodejs_version: "7.x"

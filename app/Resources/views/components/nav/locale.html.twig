@@ -4,7 +4,11 @@
 {% set other_locale_flag = app.request.locale == 'en' ? 'fr' : 'gb' %}
 
 <span class="nav-item locale-switcher">
-    <a href="{{ path( app.request.attributes.get('_route') | switch_locale(other_locale)) }}">
+    <a
+        rel="alternate"
+        href="{{ path( app.request.attributes.get('_route') | switch_locale(other_locale)) }}"
+        hreflang="{{ other_locale }}"
+    >
         <span class="flag-icon flag-icon-{{ other_locale_flag }}"></span>
         {{ other_locale_name }}
     </a>
