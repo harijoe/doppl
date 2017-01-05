@@ -35,7 +35,12 @@
                         <h1 class="title">Julien Vallini</h1>
                     {% else %}
                         <p class="title">
-                            <a href="{{ path('home_' ~ app.request.getLocale()) }}">Julien Vallini</a>
+                            <a
+                                href="{{ path('home_' ~ app.request.getLocale()) }}"
+                                class="no-click-off"
+                            >
+                                Julien Vallini
+                            </a>
                         </p>
                     {% endif %}
 

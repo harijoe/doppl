@@ -18,6 +18,10 @@
   pointer-events: none; // Allow clicks to go through containers
 }
 
+.no-click-off {
+  pointer-events: auto; // Allow clicks to go through containers
+}
+
 @include mobile {
   .hero-body {
     padding-right: 30px;
