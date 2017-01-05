@@ -1,5 +1,20 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+{% if tag is empty %}
+    {{- 'title.default'|trans -}}
+{% else %}
+    {{- 'title.default'|trans }} - {{ ('tag.' ~ tag ~ '.title')|trans -}}
+{% endif %}
+{% endblock %}
+{% block description %}
+    {% if tag is empty %}
+        {{- 'description.default'|trans -}}
+    {% else %}
+        {{- 'description.tag'|trans({'%tag-title%': ('tag.' ~ tag ~ '.title')|trans})|text2html -}}
+    {% endif %}
+{% endblock %}
+
 {% block body %}
 <div class="columns">
     <header class="column is-half">
@@ -40,7 +55,6 @@
     <section class="column about-me" id="about-me">
         <div class="hero is-fullheight tag-panel">
             <div class="hero-body">
-
                 <div class="container">
                     {# Tag description #}
                     <div class="content is-small">
@@ -73,6 +87,7 @@
                                 {{ 'home.contact_me'|trans }}
                             </a>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,15 @@
+$orange:       #FF9800 !default
+$yellow:       #FFEB3B !default
+$green:        #4CAF50 !default
+$turquoise:    #00BCD4 !default
+$blue:         #2196F3 !default
+$purple:       #9C27B0 !default
+$red:          #F44336 !default
+$blue-darker:  #0D47A1 !default
+
+$primary: $blue;
+
 @import "~bulma/bulma";
-
-
 
 @import "flag";
 @import "icon";

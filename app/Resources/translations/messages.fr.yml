@@ -1,5 +1,14 @@
 routing:
   prefix: freelance
+title:
+  default: Julien Vallini, développeur freelance
+  contact: Formulaire de contact
+description:
+  default: Julien Vallini, développeur freelance disponible pour travailler sur votre projet
+  tag: |
+    %title% freelance ayant plusieurs années d'expérience,
+    je suis disponible pour démarrer votre projet
+  contact: Utilisez le formulaire présent sur cette page pour me contacter
 links:
   home: Développeur freelance
   contact: Engagez moi

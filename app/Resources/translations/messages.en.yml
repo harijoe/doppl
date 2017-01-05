@@ -1,5 +1,14 @@
 routing:
-  prefix: Freelance developer
+  prefix: freelance
+title:
+  default: Julien Vallini, freelance developer
+  contact: Contact form
+description:
+  default: Julien Vallini, freelance developer ready to work on your project
+  tag: |
+    %tag-title% as freelance for many years, I am ready
+    to kick start your project. Contact me for more information.
+  contact: Use the form on this page to contact me
 links:
   home: Freelance developer
   contact: Hire me

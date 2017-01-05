@@ -10,14 +10,25 @@ module.exports = function (shipit) {
     require('shipit-deploy')(shipit);
     require('shipit-shared')(shipit);
 
-    const server = [
+    const remote_user = 'ubuntu';
+    const apache_user = 'www-data';
+    const servers = [
         '35.157.9.185',
-    ].map(ip => 'ubuntu@'+ip);
+    ];
+
+    const server = servers.map(ip => remote_user + '@' + ip);
 
     const workspace = '/tmp/shipit-workspace-doppl';
     const prod_parameters_path = 'app/config/parameters.yml';
     const provisioning_path = 'devops/provisioning';
     const deployTo = '/var/www/doppl';
+    const symfony_permissions = [
+        `sudo chown -R ${remote_user} .`,
+        `sudo chgrp -R ${apache_user} .`,
+        'chmod -R 750 .',
+        'chmod g+s .',
+        'sudo chmod -R g+w var',
+    ];
 
     shipit.initConfig({
         default: {
@@ -53,6 +64,8 @@ module.exports = function (shipit) {
 
     shipit.on('fetched', () => {
         shipit.start('copy_parameters');
+        shipit.start('fix_last_release_permissions');
+
     });
 
     shipit.on('updated', () => {
@@ -88,12 +101,15 @@ module.exports = function (shipit) {
         `ansible-playbook -i ${provisioning_path}/hosts ${provisioning_path}/index.yml`)
     );
 
-    shipit.blTask('give_www_data_permissions', () => runRemotely([
-        'sudo chgrp -R www-data .',
-        'chmod -R 750 .',
-        'chmod g+s .',
-        'sudo chmod -R g+w var',
-    ], shipit.releasePath)(shipit));
+    shipit.blTask('give_www_data_permissions', () => runRemotely(
+        symfony_permissions,
+        shipit.releasePath
+    )(shipit));
+
+    shipit.blTask('fix_last_release_permissions', () => runRemotely(
+        symfony_permissions,
+        shipit.currentPath
+    )(shipit));
 };
 
 /*
@@ -102,9 +118,10 @@ module.exports = function (shipit) {
 
 const runRemotely = (cmds, path) => (shipit) => {
     if (!Array.isArray(cmds) || cmds.length === 0) { return null; }
+    if (path == null || path === '') { return null; }
 
     return cmds.reduce(
-        (promiseChain, cmd) => promiseChain.then(() => shipit.remote(`cd ${path} && ${cmd}`)),
+        (promiseChain, cmd) => promiseChain.then(() => shipit.remote(`if [ -d "${path}" ]; then cd ${path} && ${cmd}; fi`)),
         Promise.resolve()
     );
 };
