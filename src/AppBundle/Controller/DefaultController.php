@@ -57,7 +57,7 @@ class DefaultController extends Controller
             ])
             ->add('send', SubmitType::class, [
                 'label' => 'contact.form.send',
-                'attr' => ['class' => 'button is-primary'],
+                'attr' => ['class' => 'button is-primary is-medium'],
             ])
             ->getForm();
 

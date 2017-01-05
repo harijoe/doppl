@@ -5,8 +5,10 @@
 
 {% block body %}
     <section class="hero is-medium has-text-centered is-fullheight contact">
+        {# Particles #}
+        <div id="particles-js" class="particles"></div>
         <div class="hero-body">
-            <div class="container">
+            <div class="container paper">
                 {# Julien Vallini #}
                 <h1 class="title">{{ 'contact.title'|trans }}</h1>
                 {% block form %}{% endblock %}

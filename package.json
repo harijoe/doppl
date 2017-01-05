@@ -25,6 +25,7 @@
     "font-awesome": "^4.7.0",
     "minimist": "^1.2.0",
     "node-sass": "^4.1.0",
+    "particles.js": "^2.0.0",
     "sass-loader": "^4.1.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
