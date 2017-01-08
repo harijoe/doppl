@@ -19,6 +19,10 @@
   pointer-events: auto; // Allow clicks to go through containers
 }
 
+footer {
+  position: relative;
+}
+
 @include mobile {
   .hero-body {
     padding-right: 30px;
