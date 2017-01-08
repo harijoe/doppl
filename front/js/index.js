@@ -3,7 +3,9 @@ import './listeners';
 import 'particles.js';
 
 particlesJS.load('particles-js', window.location.origin + '/config/particles.json', function() {
-    console.log('callback - particles.js config loaded');
+    const particles = document.getElementsByClassName('particles');
+    console.log(particles);
+    [...particles].forEach(el => el.classList.add('show'));
 });
 
 if (module.hot) {

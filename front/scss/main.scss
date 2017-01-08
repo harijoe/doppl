@@ -2,6 +2,7 @@
 @import "components/for_these_jobs";
 @import "components/header";
 @import "components/nav";
+@import "components/particles";
 
 .columns {
   margin-top: 0;
@@ -14,11 +15,7 @@
   padding: 0;
 }
 
-.no-click {
-  pointer-events: none; // Allow clicks to go through containers
-}
-
-.no-click-off {
+.is-enabled {
   pointer-events: auto; // Allow clicks to go through containers
 }
 
