@@ -25,6 +25,24 @@
          name: unzip
          state: present
      - file:
-        path: /var/www
-        owner: ubuntu
-        group: ubuntu
+         path: /var/www
+         owner: ubuntu
+         group: ubuntu
+     - cron:
+         name: "Send doppl email - 0"
+         job: "php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod"
+     - cron:
+         name: "Send doppl email - 10"
+         job: "( sleep 10 ; php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod)"
+     - cron:
+         name: "Send doppl email - 20"
+         job: "( sleep 20 ; php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod)"
+     - cron:
+         name: "Send doppl email - 30"
+         job: "( sleep 30 ; php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod)"
+     - cron:
+         name: "Send doppl email - 40"
+         job: "( sleep 40 ; php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod)"
+     - cron:
+         name: "Send doppl email - 50"
+         job: "( sleep 50 ; php /var/www/doppl/current/bin/console swiftmailer:spool:send --message-limit=10 -e prod)"
