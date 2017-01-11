@@ -7,8 +7,9 @@ parameters:
     mailer_password: Atu4Lo+Xs8TP1pItLSUzDbYj7FnAwjr1Z7EhxuJ5Iv3p
     mailer_port: 587
     mailer_encryption: tls
-    from_email: julien@vallini.io
-    to_email: vallinij@gmail.com
+    notif_from_email: notify@vallini.io
+    notif_to_email: vallinij@gmail.com
+    autoreply_from_email: hello@vallini.io
     secret: 10a71537bd16196f3bd83e3b8ee3d35faf0cc54e
     locales:
         - { prefix: '', locale: 'en' }

@@ -37,3 +37,13 @@ services:
             - '@translator.default'
         tags:
             - { name: twig.extension }
+
+    app.mailer:
+        class: AppBundle\Mailer\Mailer
+        arguments:
+            - '@translator.default'
+            - '%autoreply_from_email%'
+            - '%notif_from_email%'
+            - '%notif_to_email%'
+            - '@templating'
+            - '@mailer'

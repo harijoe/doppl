@@ -9,8 +9,9 @@ parameters:
     mailer_password:   ~
     mailer_port:       587
     mailer_encryption: tls
-    from_email: julien@vallini.io
-    to_email: vallinij@gmail.com
+    notif_from_email: notify@vallini.io
+    notif_to_email: vallinij@gmail.com
+    autoreply_from_email: hello@vallini.io
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt

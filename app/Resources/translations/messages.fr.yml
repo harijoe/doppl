@@ -141,13 +141,19 @@ contact:
     message: Merci pour votre message !
     return: Retourner à l'accueil
   form:
-   name:
-     label: Nom
-     placeholder: John Doe
-   email:
-     label: Email
-     placeholder: votremail@exemple.com
-   message:
-     label: Message
-     placeholder: Parlez moi de votre projet
-   send: Envoyer
+    name:
+      label: Nom
+      placeholder: John Doe
+    email:
+      label: Email
+      placeholder: votremail@exemple.com
+    message:
+      label: Message
+      placeholder: Parlez moi de votre projet
+    send: Envoyer
+email:
+  autoreply:
+    subject: Merci de m'avoir contacté !
+    body: Hello world!
+  notification:
+    subject: Doppl — Nouveau message

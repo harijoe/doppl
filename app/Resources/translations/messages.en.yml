@@ -115,3 +115,9 @@ contact:
       label: Message
       placeholder: Tell me about your project…
     send: Send
+email:
+  autoreply:
+    subject: Thanks for your email!
+    body: Hello world!
+  notification:
+    subject: Doppl — Nouveau message

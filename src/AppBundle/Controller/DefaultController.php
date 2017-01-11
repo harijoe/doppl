@@ -65,20 +65,12 @@ class DefaultController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $name = $form->getData()['name'];
-//            $email = $form->getData()['email'];
-//            $message = $form->getData()['message'];
-            $message = \Swift_Message::newInstance()
-                ->setSubject("New message from Doppl — from {$name}")
-                ->setFrom($this->getParameter('from_email'))
-                ->setTo($this->getParameter('to_email'))
-                ->setBody(
-                    $this->renderView(
-                        ':emails/contact:notification.html.twig',
-                        $form->getData(),
-                        'text/html'
-                ))
-            ;
-            $this->get('mailer')->send($message);
+            $email = $form->getData()['email'];
+            $message = $form->getData()['message'];
+
+            $mailer = $this->get('app.mailer');
+            $mailer->sendAutoreply($name, $email);
+            $mailer->sendNotification($name, $message, $email);
 
             return $this->redirectToRoute("contact_success_{$request->getLocale()}");
         }
