@@ -9,4 +9,14 @@
     margin-top: 10px;
     width: 100%;
   }
+  .paper-plane {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    width: 20%;
+
+    @include mobile {
+      display: none;
+    }
+  }
 }

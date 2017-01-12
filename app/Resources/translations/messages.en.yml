@@ -102,7 +102,8 @@ contact:
   subtitle: |
     Send me a message using this form, I will answer you as soon as I can!
   success:
-    message: Thanks! I will respond shortly
+    message: Thanks for your message! I will respond shortly
+    title: Thank you
     return: Return to home
   form:
     name:

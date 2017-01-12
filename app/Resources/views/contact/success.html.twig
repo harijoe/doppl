@@ -1,6 +1,8 @@
 {% extends ':contact:base.html.twig' %}
 
 {% block form %}
+    <h1 class="title">{{ 'contact.success.title'|trans }}</h1>
+    {{ include('components/success_icon.html.twig') }}
     <p class="subtitle">{{ 'contact.success.message'|trans }}</p>
 
     <p>

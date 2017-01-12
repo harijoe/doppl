@@ -1,14 +1,18 @@
 {% extends ':contact:base.html.twig' %}
 
 {% block form %}
-<div class="subtitle">{{ 'contact.subtitle'|trans|text2html }}</div>
-<div class="columns">
-    <div class="column is-one-third is-offset-one-third">
-        <div class="container has-text-left">
-            {{ form_start(form) }}
-            {{ form_widget(form) }}
-            {{ form_end(form) }}
+    <h1 class="title">{{ 'contact.title'|trans }}</h1>
+    <div class="subtitle">{{ 'contact.subtitle'|trans|text2html }}</div>
+
+    <img class="paper-plane" alt="Paper plane" src="{{ asset('img/paper-plane.png') }}" />
+
+    <div class="columns">
+        <div class="column is-one-third is-offset-one-third">
+            <div class="container has-text-left">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}

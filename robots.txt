@@ -1,0 +1,6 @@
+# robots.txt for http://julien.vallini.io/
+
+User-agent: *
+# Sucess pages
+Disallow: /contact/success
+Disallow: /fr/contact/succes

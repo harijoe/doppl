@@ -136,7 +136,8 @@ contact:
   subtitle: |
     Contactez moi en utilisant ce formulaire, je vous répondrai le plus rapidement possible !
   success:
-    message: Merci pour votre message !
+    message: Je vous remercie pour votre message, j'y répondrai dès que possible.
+    title: Merci
     return: Retourner à l'accueil
   form:
     name:
