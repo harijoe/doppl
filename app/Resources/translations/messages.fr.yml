@@ -63,6 +63,7 @@ tag:
       réinventer la roue ou d'installer de librairies volumineuses comme c'est le cas avec le Java par exemple !
       De plus, à l'aide d'un framework comme Symfony, il est possible d'écrire du code maintenable sur le long
       terme, c'est à dire évoluant avec votre projet
+    in-phrase: dans le développement PHP
   javascript:
     name: Javascript
     title: Développeur Javascript
@@ -78,6 +79,7 @@ tag:
       composants et non globalement. React a gagné en popularité ces 3 dernières années, c'est maintenant le
       standard de l'industrie pour le développement d'applications complexes. On peut même l'utiliser pour
       le développement mobile avec React Native.
+    in-phrase: dans le développement Javascript
   html5:
     name: HTML5
     title: Développeur web

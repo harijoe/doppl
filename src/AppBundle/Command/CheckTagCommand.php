@@ -13,7 +13,7 @@ class CheckTagCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('app:tag:check')
+            ->setName('app:check:tags')
             ->setDescription('Checks the format of the tags content')
         ;
     }
