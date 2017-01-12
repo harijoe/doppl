@@ -15,7 +15,7 @@ links:
 home:
   title: Top web freelance developer
   subtitle: |
-      <strong>Need somebody to work with you on your innovative project or simply do the job?</strong>
+      # Need somebody to work with you on your innovative project or simply do the job?
 
       With several years of experience into <strong>web development</strong>,
       I can help you making your project succeed.
@@ -25,7 +25,7 @@ home:
       efficiently and I guarantee the sustainability of your project.
   tag:
     subtitle: |
-      <strong>Need somebody to work with you on your innovative project or simply do the job?</strong>
+      # Need somebody to work with you on your innovative project or simply do the job?
 
       With <strong>several years of experience %tag-in-phrase%</strong>,
       I can help you making your project succeed.

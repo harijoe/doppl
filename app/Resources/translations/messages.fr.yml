@@ -15,8 +15,7 @@ links:
 home:
   title: Top développeur web freelance
   subtitle: |
-      <strong>Vous recherchez un freelance pour travailler sur votre projet
-      à Paris ou ailleurs ?</strong>
+      # Vous recherchez un freelance pour travailler sur votre projet à Paris ou ailleurs ?
 
       Fort de plusieurs années d'expérience dans le <strong>développement
       d'applications web</strong>, je peux vous aider à faire décoller
@@ -30,8 +29,7 @@ home:
       pour une reprise des développements futurs la plus aisée possible.
   tag:
     subtitle: |
-      <strong>Vous recherchez un freelance pour travailler sur votre projet
-      à Paris ou ailleurs ?</strong>
+      # Vous recherchez un freelance pour travailler sur votre projet à Paris ou ailleurs ?
 
       Fort de plusieurs années d'expérience %tag-in-phrase%,
       je peux vous aider à faire décoller votre projet. L'expertise <strong>%tag-in-phrase%</strong> que
