@@ -16,9 +16,9 @@
 {% endblock %}
 
 {% block body %}
+<div id="particles-js" class="particles"></div>
 <div class="columns">
     {# Particles #}
-    <div id="particles-js" class="particles"></div>
     <header class="column is-half is-disabled">
         <div class="header hero is-fullheight has-text-centered">
             <div class="hero-body">
@@ -55,13 +55,13 @@
                 </div>
             </div>
             <div class="hero-foot">
-                <a href="#about-me">
+                <a href="#homepage">
                     <svg class="icon dark icon-chevron-down"><use xlink:href="#icon-chevron-down"></use></svg>
                 </a>
             </div>
         </div>
     </header>
-    <section class="column about-me" id="about-me">
+    <section class="column homepage" id="homepage">
         <div class="hero is-fullheight tag-panel">
             <div class="hero-body">
                 <div class="container paper">
@@ -102,5 +102,67 @@
         </div>
     </section>
 </div>
+
+    <section class="hero is-secondary about-me foreground">
+        <div class="hero-body">
+            <div class="container">
+                {% if tag is empty %}
+                    <div class="content logo-container">
+                        <a href="{{ social.twitter }}">
+                            <div class="logo">
+                                <svg class="icon icon-twitter">
+                                    <use xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </div>
+                            <div class="subtitle">
+                                Twitter
+                            </div>
+                        </a>
+                        <a href="{{ social.github }}">
+                            <div class="logo">
+                                <svg class="icon icon-github">
+                                    <use xlink:href="#icon-github"></use>
+                                </svg>
+                            </div>
+                            <div class="subtitle">
+                                Github
+                            </div>
+                        </a>
+                        <a href="{{ social.linkedin }}">
+                            <div class="logo">
+                                <svg class="icon icon-linkedin2">
+                                    <use xlink:href="#icon-linkedin2"></use>
+                                </svg>
+                            </div>
+                            <div class="subtitle">
+                                LinkedIn
+                            </div>
+                        </a>
+                        <a href="{{ social.stackoverflow }}">
+                            <div class="logo">
+                                <svg class="icon icon-stackoverflow"><use
+                                            xlink:href="#icon-stackoverflow"></use></svg>
+                            </div>
+                            <div class="subtitle">
+                                Stack Overflow
+                            </div>
+                        </a>
+                    </div>
+                {% else %}
+                {# Tag description #}
+                <div class="content is-small">
+                    {{ ('tag.' ~ tag ~ '.description')|trans|text2html }}
+                </div>
+
+                <div class="has-text-centered">
+                    <a class="button is-primary is-medium" href="{{ path('contact_' ~ app.request.getLocale()) }}">
+                        {{ 'about_me.contact_me'|trans }}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
 

@@ -86,7 +86,7 @@ tag:
     in-phrase: into Fullstack development
   cto:
     name: CTO
-    title: CTO - Chief Technical Officer As a Service
+    title: CTO - Chief Technical Officer
     in-phrase: into technical team management
   react-native:
     name: React Native
@@ -122,3 +122,5 @@ email:
     body: Hello world!
   notification:
     subject: Doppl — Nouveau message
+about_me:
+  contact_me: Let's talk about your project

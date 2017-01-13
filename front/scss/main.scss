@@ -3,6 +3,7 @@
 @import "components/header";
 @import "components/nav";
 @import "components/particles";
+@import "components/social_medias";
 
 .columns {
   margin-top: 0;
@@ -19,8 +20,13 @@
   pointer-events: auto; // Allow clicks to go through containers
 }
 
-footer {
+.foreground {
   position: relative;
+}
+
+.is-secondary {
+  border: 1px solid $border;
+  margin-bottom: 10%;
 }
 
 @include mobile {

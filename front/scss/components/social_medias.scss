@@ -1,0 +1,47 @@
+.logo-container {
+  text-align: center;
+  display: flex;
+  margin-bottom: 0 !important;
+  a {
+    color: $text;
+    flex-grow: 1;
+    border-bottom: none !important;
+
+    &:hover {
+      .icon {
+        filter: brightness(80%);
+      }
+      .subtitle {
+        color: $black;
+      }
+    }
+  }
+
+  .subtitle {
+    margin: 10px;
+    color: $grey;
+    transition: color 0.2s ease-in-out;
+
+    @include mobile {
+      font-size: 1em;
+    }
+  }
+
+  .icon {
+    width: 2em;
+    height: 2em;
+    transition: filter 0.2s ease-in-out;
+  }
+}
+.icon-twitter {
+  fill: $twitter;
+}
+.icon-github {
+  fill: $github;
+}
+.icon-linkedin2 {
+  fill: $linkedin;
+}
+.icon-stackoverflow {
+  fill: $stackoverflow;
+}

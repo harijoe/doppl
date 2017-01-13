@@ -43,6 +43,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         tags: '%tags%'
+        social: '%social%'
 
 # Doctrine Configuration
 #doctrine:

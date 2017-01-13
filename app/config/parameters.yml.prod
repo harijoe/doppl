@@ -34,3 +34,8 @@ parameters:
         fields:
             - name
             - title
+    social:
+        twitter: https://twitter.com/JulienVallini
+        github: https://github.com/harijoe
+        linkedin: https://fr.linkedin.com/in/julienvallini
+        stackoverflow: http://stackoverflow.com/users/3774551/harijoe

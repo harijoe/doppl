@@ -39,7 +39,7 @@ class CheckTranslationsCommand extends ContainerAwareCommand
                 $keys = array_keys($messages);
 
                 if ($referenceKeys !== null) {
-                    $intersection = array_diff($referenceKeys, $keys);
+                    $intersection = array_diff(array_merge($referenceKeys, $keys), array_intersect($referenceKeys, $keys));
                     $values = implode(', ', $intersection);
                     assert(
                         empty($intersection),

@@ -158,3 +158,5 @@ email:
     body: Hello world!
   notification:
     subject: Doppl — Nouveau message
+about_me:
+  contact_me: Discutons ensemble de votre projet
