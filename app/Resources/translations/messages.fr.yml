@@ -83,10 +83,27 @@ tag:
   html5:
     name: HTML5
     title: Développeur web
+    description: |
+      # HTML5 et le SEO
+      La spécification HTML5 a apporté beaucoup de nouvelles balises. Celles-ci permettent de plus précisément
+      décrire la nature du contenu des pages web. Utiliser des balises pertinentes permet d'augmenter l'accessibilité
+      et le référencement naturel d'un site internet.
     in-phrase: dans le développement HTML5
   react:
     name: React
     title: Expert React
+    description: |
+      # L'arrivée des Single-Page Applications
+      La popularité du Javascript n'a cessé d'augmenter ses dernières années. Traditionnellement le langage était
+      utilisé en parallèleCette tendance s'est accentuée avec
+      l'arrivée d'AngularJS en 2009 et des <abbr title="Single-page Applications">SPA</abbr>.
+
+      # React
+      Les interfaces utilisateurs développées en javascript se sont peu à peu complexifiées. Ceci a abouti à
+      l'apparition de React, une librairie Javascript permettant aux développeurs de raisonner en terme de
+      composants et non globalement. React a gagné en popularité ces 3 dernières années, c'est maintenant le
+      standard de l'industrie pour le développement d'applications complexes. On peut même l'utiliser pour
+      le développement mobile avec React Native.
     in-phrase: dans le développement React
   nodejs:
     name: Nodejs
@@ -131,7 +148,7 @@ tag:
   seo:
     name: SEO
     title: Expert SEO
-    in-phrase: dans l'optimisation du SEO:
+    in-phrase: dans l'optimisation du SEO
 contact:
   link: Contactez moi
   title: Me contacter
