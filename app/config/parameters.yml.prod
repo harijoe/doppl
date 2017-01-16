@@ -1,6 +1,6 @@
 # This file is auto-generated during the composer install
 parameters:
-    version: 1
+    version: 2
     mailer_transport: smtp
     mailer_host: email-smtp.eu-west-1.amazonaws.com
     mailer_user: AKIAIP2C3HGBJTT664KA
