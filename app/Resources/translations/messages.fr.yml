@@ -69,7 +69,7 @@ tag:
       l'apparition de <strong>React</strong>, une librairie Javascript permettant aux développeurs de raisonner en terme de
       composants et non globalement. React a gagné en popularité ces 3 dernières années, c'est maintenant le
       <strong>standard de l'industrie</strong> pour le développement d'applications complexes. On peut même l'utiliser pour
-      le développement mobile avec <strong>React Native</strong>.
+      le développement mobile avec <strong>React Native.
     in-phrase: dans le développement React
   nodejs:
     name: Nodejs

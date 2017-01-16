@@ -70,7 +70,7 @@ tag:
   nodejs:
     name: Nodejs
     title: Nodejs Developer
-    description,: |
+    description: |
         # NodeJS, server-side javascript
         With the release of NodeJS, it has been possible these last years to develop applications <strong>backends in javascript</strong>*[]:
         This has the advantage of using the same language for the whole technology stack. It is possible to use it with new
