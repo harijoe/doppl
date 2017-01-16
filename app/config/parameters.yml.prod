@@ -16,21 +16,21 @@ parameters:
         - { prefix: 'fr', locale: 'fr' }
     tags:
         list:
-            - php
-            - javascript
-            - html5
-            - cto
-            - react
-            - nodejs
             - devops
+            - html5
+            - javascript
+            - nodejs
+            - php
+            - react
             - scrum
-            - serverless
-            - graphql
             - symfony
-            - frontend
-            - fullstack
-            - react-native
-            - seo
+#            - cto
+#            - frontend
+#            - fullstack
+#            - graphql
+#            - react-native
+#            - seo
+#            - serverless
         fields:
             - name
             - title

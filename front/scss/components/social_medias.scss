@@ -2,6 +2,9 @@
   text-align: center;
   display: flex;
   margin-bottom: 0 !important;
+  margin-left: 20%;
+  margin-right: 20%;
+
   a {
     color: $text;
     flex-grow: 1;
@@ -9,12 +12,16 @@
 
     &:hover {
       .icon {
-        filter: brightness(80%);
+        filter: opacity(100%);
       }
       .subtitle {
         color: $black;
       }
     }
+  }
+
+  @include mobile {
+    margin: 0;
   }
 
   .subtitle {
@@ -30,6 +37,7 @@
   .icon {
     width: 2em;
     height: 2em;
+    filter: opacity(50%);
     transition: filter 0.2s ease-in-out;
   }
 }

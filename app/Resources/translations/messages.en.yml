@@ -20,16 +20,7 @@ home:
       With several years of experience into <strong>web development</strong>,
       I can help you making your project succeed.
 
-      I will <strong>understand your business</strong> and adapt accordingly to deliver the
-      maximum value to your company. I pride myself in working in transparently,
-      efficiently and I guarantee the sustainability of your project.
-  tag:
-    subtitle: |
-      # Need somebody to work with you on your innovative project or simply do the job?
-
-      With <strong>several years of experience %tag-in-phrase%</strong>,
-      I can help you making your project succeed.
-
+  description: |
       I will <strong>understand your business</strong> and adapt accordingly to deliver the
       maximum value to your company. I pride myself in working in transparently,
       efficiently and I guarantee the sustainability of your project.
@@ -39,63 +30,109 @@ tag:
   php:
     name: PHP
     title: PHP developer
+    description: |
+        # PHP, the language of web
+
+        According to the last w3techs study, <strong>PHP is the most used language</strong> for website development.
+        The big names on the web such as Facebook or Amazon use it extensively for their operations. Wordpress, the most used
+        <abbr title="Content Management System">CMS</abbr> is actually coded in PHP. A large amount of developers know PHP, it
+        is thus easier to recruit new developers as the project grows.
     in-phrase: into PHP development
   javascript:
     name: Javascript
     title: Javascript developer
+    description: |
+        # Choosing Javascript for your project
+        Javascript's popularity has steadily increased in the last years. Especially with the release of Angular in 2009 and
+        the growing hype around <abbr title="Single-page Applications">SPA</abbr>. The <strong>ReactJS</strong> technology is now the industry
+        standard for frontend Javascript. But Javascript can also be used on the server side, with help of NodeJs.
     in-phrase: into Javascript development
   html5:
     name: HTML5
     title: Web Developer
+    description: |
+        # Demand a HTML5 expertise to increase <abbr title="Search Engine Optimization>SEO</abbr>
+
+        The HTML5 specification brings a lot of new tags. Those allows developers to describe more accurately the content
+        of your web pages. Using relevant tags improves natural search-engine ranking, which is critical for your application
+        user growth.
     in-phrase: into HTML5 development
   react:
     name: React
     title: React Expert
+    description: |
+        # React, leader of frontend Javascript frameworks
+        User interfaces developed in Javascript became more complex. This resulted in the creation of <strong>ReactJS</strong>,
+        a javascript library which encourage developers to think in terms of components, instead of globally. This is nowadays
+        the <strong>industry standard</strong> for complex web applications development. We can even use it for mobile app
+        development thanks to <strong>React Native</strong>
     in-phrase: into React development
   nodejs:
     name: Nodejs
     title: Nodejs Developer
+    description,: |
+        # NodeJS, server-side javascript
+        With the release of NodeJS, it has been possible these last years to develop applications <strong>backends in javascript</strong>*[]:
+        This has the advantage of using the same language for the whole technology stack. It is possible to use it with new
+        technologies such as Server-Side Rendering, which allows to use ReactJS and to keep the app SEO-friendly as it would
+        be with a regular website.
     in-phrase: into Nodejs development
   devops:
     name: Devops
     title: Devops Expert
+    description: |
+        # Deploying to production must be simplistic
+        For years, deploying into production was the scariest step in a product lifecycle development. The goal of the DevOps
+        culture is to make deployments to production as easy as pushing a button. The users won't even notice they now browse
+        an updated version of the app!
     in-phrase: into Devops development
   scrum:
     name: Scrum
     title: Scrum Master
+    description: |
+        # Develop efficiently and transparently
+        Scrum is an agile methodology which keeps the focus of developers on the business value of their code. It allows
+        an accurate reporting of the state of developments and to plan the release dates of incoming features.
     in-phrase: with Scrum methodology
-  serverless:
-    name: Serverless
-    title: Serverless Expert
-    in-phrase: into Serverless development
-  graphql:
-    name:  Graphql
-    title: Graphql Expert
-    in-phrase: into Graphql development
   symfony:
     name:  Symfony3
     title: Symfony3 Expert
+    description: |
+        # Develop with Symfony
+        PHP is an excellent language to quickly develop a Proof Of Concept. The language offers tools to interact the HTTP
+        protocol in a handy way natively. No need to reinvent the wheel or to install heavy libraries as it would be the case
+        with Java for example.
+        In addition, it is possible, using a framework such as Symfony, to develop maintainable and well-organised code
+        which will be easy to expand as your project grows.
     in-phrase: into Symfony3 development
-  frontend:
-    name: Frontend
-    title: Frontend Developer
-    in-phrase: into Frontend development
-  fullstack:
-    name: Fullstack
-    title: Fullstack Developer
-    in-phrase: into Fullstack development
-  cto:
-    name: CTO
-    title: CTO - Chief Technical Officer
-    in-phrase: into technical team management
-  react-native:
-    name: React Native
-    title: React Native Developer
-    in-phrase: into React  development
-  seo:
-    name: SEO
-    title: SEO Expert
-    in-phrase: in SEO optimization
+#  serverless:
+#    name: Serverless
+#    title: Serverless Expert
+#    in-phrase: into Serverless development
+#  graphql:
+#    name:  Graphql
+#    title: Graphql Expert
+#    in-phrase: into Graphql development
+#  frontend:
+#    name: Frontend
+#    title: Frontend Developer
+#    in-phrase: into Frontend development
+#  fullstack:
+#    name: Fullstack
+#    title: Fullstack Developer
+#    in-phrase: into Fullstack development
+#  cto:
+#    name: CTO
+#    title: CTO - Chief Technical Officer
+#    in-phrase: into technical team management
+#  react-native:
+#    name: React Native
+#    title: React Native Developer
+#    in-phrase: into React  development
+#  seo:
+#    name: SEO
+#    title: SEO Expert
+#    in-phrase: in SEO optimization
 contact:
   link: Contact me
   title: Contact me
