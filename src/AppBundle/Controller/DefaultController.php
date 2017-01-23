@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Form\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -39,34 +40,14 @@ class DefaultController extends Controller
      */
     public function contactAction(Request $request)
     {
-        $form = $this->createFormBuilder()
-            ->add('name', TextType::class, [
-                'label' => 'contact.form.name.label',
-                'attr' => ['class' => 'input', 'placeholder' => 'contact.form.name.placeholder'],
-                'label_attr' => ['class' => 'label'],
-            ])
-            ->add('email', EmailType::class, [
-                'label' => 'contact.form.email.label',
-                'attr' => ['class' => 'input', 'placeholder' => 'contact.form.email.placeholder'],
-                'label_attr' => ['class' => 'label'],
-            ])
-            ->add('message', TextareaType::class, [
-                'label' => 'contact.form.message.label',
-                'attr' => ['class' => 'textarea', 'placeholder' => 'contact.form.message.placeholder'],
-                'label_attr' => ['class' => 'label'],
-            ])
-            ->add('send', SubmitType::class, [
-                'label' => 'contact.form.send',
-                'attr' => ['class' => 'button is-primary is-medium'],
-            ])
-            ->getForm();
-
+        $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $name = $form->getData()['name'];
-            $email = $form->getData()['email'];
-            $message = $form->getData()['message'];
+            $data = $form->getData();
+            $name = $data['name'];
+            $email = $data['email'];
+            $message = $data['message'];
 
             $mailer = $this->get('app.mailer');
             $mailer->sendAutoreply($name, $email);

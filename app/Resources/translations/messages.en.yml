@@ -156,7 +156,14 @@ contact:
 email:
   autoreply:
     subject: Thanks for your email!
-    body: Hello world!
+    body: |
+        Hello %name%,
+
+        Thanks for contacting me, I will respond shortly.
+
+        Have a great day,
+
+        Julien Vallini
   notification:
     subject: Doppl — Nouveau message
 about_me:

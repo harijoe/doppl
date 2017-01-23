@@ -163,7 +163,14 @@ contact:
 email:
   autoreply:
     subject: Merci de m'avoir contacté !
-    body: Hello world!
+    body: |
+        Hello %name%,
+
+        Merci de m'avoir contacté, je reviens vers vous très rapidement.
+
+        Bonne journée,
+
+        Julien Vallini
   notification:
     subject: Doppl — Nouveau message
 about_me:
