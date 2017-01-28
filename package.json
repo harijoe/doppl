@@ -23,6 +23,7 @@
     "file-loader": "^0.9.0",
     "flag-icon-css": "^2.8.0",
     "font-awesome": "^4.7.0",
+    "json-loader": "^0.5.4",
     "minimist": "^1.2.0",
     "node-sass": "^4.1.0",
     "particles.js": "^2.0.0",
@@ -33,7 +34,6 @@
   },
   "devDependencies": {
     "commander": "^2.9.0",
-    "json-loader": "^0.5.4",
     "shipit": "^1.0.2",
     "shipit-deploy": "^2.4.0",
     "shipit-shared": "^4.4.2",
