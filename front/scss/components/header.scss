@@ -1,7 +1,9 @@
 .selfie {
   border-radius: 100%;
-  width: 240px;
-  height: 240px;
+  height: 50%;
+  width: 50%;
+  max-width: 200px;
+  max-height: 200px;
   margin-bottom: 40px;
   pointer-events: none; // Allow clicks to go through containers
 }
@@ -9,8 +11,10 @@
 .header {
   .container {
     padding-bottom: 20px;
+    margin-top: 20px;
   }
   .hero-foot {
+    z-index: 0;
     padding-bottom: 30px;
     @include tablet {
       display: none;
