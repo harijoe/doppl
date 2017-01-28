@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "commander": "^2.9.0",
+    "json-loader": "^0.5.4",
     "shipit": "^1.0.2",
     "shipit-deploy": "^2.4.0",
     "shipit-shared": "^4.4.2",
