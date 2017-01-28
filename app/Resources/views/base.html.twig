@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}{{ 'title.default'|trans }}{% endblock %}</title>
-        <meta name="description" content="{% block description %}{{ 'description.default'|trans }}{% endblock %}">
+        <meta name="description" content="{% block description %}{{- 'description.default'|trans -}}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />

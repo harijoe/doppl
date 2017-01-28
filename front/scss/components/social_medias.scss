@@ -17,6 +17,11 @@
       .subtitle {
         color: $black;
       }
+
+      @include desktop {
+        transform: scale(1.1);
+        transition: transform 0.2s ease-out;
+      }
     }
   }
 
@@ -30,7 +35,7 @@
     transition: color 0.2s ease-in-out;
 
     @include mobile {
-      font-size: 1em;
+      display: none;
     }
   }
 
